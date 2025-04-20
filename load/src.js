@@ -42,5 +42,5 @@ window.addEventListener("load", call_random_rotate);
 window.addEventListener("click", enterPage);
 
 function enterPage(){
-    window.location.href = "home page/main.html";
+    window.location.href = "home/main.html";
 }
