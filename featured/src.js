@@ -65,3 +65,15 @@ function changeCaption(num) {
     var caption = document.getElementById("caption");
     caption.textContent = num + " / " + pages;
 }
+
+// sets the height of the arrow box based on the pic height to ensure they're in the center 
+window.onload = function() {
+    var img = document.getElementById("img");
+    var height = img.getAttribute('height');
+
+    var arrow_prev = document.getElementById("arrow-prev");
+    var arrow_next = document.getElementById("arrow-next");
+
+    arrow_prev.style.height = height; 
+    arrow_next.style.height = height; 
+};

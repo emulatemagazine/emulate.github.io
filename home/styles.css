@@ -257,7 +257,7 @@ body{
     display: grid;
     grid-template-columns: 0.5fr, 1fr, 1fr, 0.5fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 30px;
+    grid-column-gap: 5vh;
     grid-row-gap: 0px;
 }
     
@@ -272,8 +272,7 @@ body{
 }
 .recent_cover{
     border: 5px solid white;
-    object-fit: cover;
-    max-width: 100%;
+    width: 50vh;
 }
 .caption {
     font-family: 'Spectral', 'Courier New', monospace;
@@ -281,11 +280,3 @@ body{
     color: white;
     font-style: italic;
 }
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
