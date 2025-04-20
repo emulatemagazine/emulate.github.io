@@ -142,7 +142,7 @@ body{
     position: absolute;
     display: grid;
 
-    grid-template-columns: .05fr repeat(3, 1fr) .05fr;
+    grid-template-columns: .08fr repeat(3, 1fr) .08fr;
     grid-template-rows: .15fr repeat(3, 1fr) .15fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -179,7 +179,7 @@ body{
     position: absolute;
     z-index: 10;
 
-    top: 90vh;
+    top: 85vh;
     left: 10vh;
     width: 100%;
 }
@@ -241,3 +241,25 @@ body{
 .div4 { grid-area: 2 / 3 / 3 / 4; }
 .div5 { grid-area: 3 / 2 / 4 / 3; }
 .div6 { grid-area: 3 / 3 / 4 / 4; }
+
+
+.recent-work {
+    width: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+    
+.col1 { grid-area: 1 / 1 / 2 / 2; }
+.col2 { grid-area: 1 / 2 / 2 / 3; }
+.recent_cover{
+    border: 5px solid white;
+}
+.caption {
+    font-family: 'Spectral', 'Courier New', monospace;
+    font-size: 18px;
+    color: white;
+    font-style: italic;
+}
