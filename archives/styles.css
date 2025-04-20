@@ -144,8 +144,9 @@ header {
     border-style: solid;
     /*opacity: 0.5;*/
 }
-.x-btn{
+.x-btn img{
     position: absolute;
+    width: 5%;
     left: 10px;
     top: 10px;
 }
@@ -221,6 +222,7 @@ button {
     cursor: pointer;
     margin: 10px;
     transition: transform 0.5s;
+    z-index: 999;
 }
 
 /*button:focus {*/

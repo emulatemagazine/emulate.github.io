@@ -1,3 +1,7 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body{
     width: 100vh;
     height: 100vh;
@@ -100,7 +104,7 @@ body{
 
 .coreImg{
     position: absolute;
-    z-index: -1;
+    z-index: -10;
     /*aspect-ratio: 1;*/
 
     top: 50%;
@@ -117,9 +121,9 @@ body{
     position: absolute;
     z-index: 1;
 
-    width: 30vh;
-    top: 45vh;
-    left: 35vh;
+    width: 20%;
+    top: 45%;
+    left: 20%;
     margin: 0 auto;
 }
 
@@ -171,14 +175,13 @@ body{
 
 .bg {
     width: 100%;
-    height: 270vh;
+    height: 200vh;
 
     position: absolute;
-    top: 95vh;
+    top: 95%;
     z-index: 0;
     background-image: url(../images/backgrounds/blueFabric.jpg);
-    background-repeat: repeat;
-    background-size: cover;
+
 }
 
 .recents {
@@ -190,20 +193,21 @@ body{
     width: 100%;
 }
 .recents img{
-    width: 80vh;
+    width: 40%;
 }
 
 .emulate{
-    width: 10vh;
-    height: 20vh;
+    width: 40%;
+    height: auto;
 
     position: absolute;
     top: 50vh;
-    left: 85vh;
+    left: 50%;
 }
 
 .emulate_img{
-    height: 20vh;
+    /*width: 20vh;*/
+    width: 100%;
     z-index: 999;
 }
 
@@ -251,8 +255,9 @@ body{
 
 .recent-work {
     position: absolute; 
-    top: 120vh;
-    width: 200vh;
+    top: 100vh;
+    width: 100%;
+        /*background-color: red;*/
     
     display: grid;
     grid-template-columns: 0.5fr, 1fr, 1fr, 0.5fr;
@@ -265,6 +270,7 @@ body{
 .col2 { grid-area: 1 / 3 / 2 / 4;}
 
 .left-margin{
+    /*background-color: blue;*/
     grid-area: 1 / 1 / 2 / 2;
 }
 .right-margin{
