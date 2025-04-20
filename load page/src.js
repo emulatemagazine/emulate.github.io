@@ -35,12 +35,12 @@ function random_letter(id, letter){
     letterIds[letter] = currentImg;
 
     let img = document.getElementById(id);
-    img.src = "../_archive/letters/" + letter + "/" + currentImg + ".png";
+    img.src = "_archive/letters/" + letter + "/" + currentImg + ".png";
 }
 
 window.addEventListener("load", call_random_rotate);
 window.addEventListener("click", enterPage);
 
 function enterPage(){
-    window.location.href = "../home page/main.html";
+    window.location.href = "home page/main.html";
 }
