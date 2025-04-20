@@ -342,7 +342,7 @@ LIBRARY STYLING
     list-style-type: none;
 }
 .TOC li{
-    font-size: xxx-large;
+    font-size: xx-large;
     font-family: "Prata", "Spectral", serif;
 }
 .TOC img{
@@ -351,7 +351,7 @@ LIBRARY STYLING
     bottom: 0;
 }
 .year{
-    font-size: xx-large;
+    font-size: x-large;
     font-family: "Karla", monospace;
     vertical-align: top;
 }
@@ -364,11 +364,17 @@ LIBRARY STYLING
 .prev {
     transform: scaleX(-1);
 }
+.spacer{
+    height: 12vh;
+    width: 100%;
+    min-height: 100px;
+    /*background-color: red;*/
+}
 
 
 footer {
     position: relative;
     height: 100px;
-    background-color: red;
+    /*background-color: red;*/
 
 }
