@@ -17,7 +17,7 @@ A work in progress.
 4. In the archive.html file (../archives/archives/html), scroll down to the 
 
 5. To create a new spine on the shelf, copy and paste the following code underneath the most recent one:
-~~~
+~~~~
 <div class="issue vol~INSERT_ISSUE_NUM_HERE~" id="INSERT_ISSUE_NUM_HERE" onmouseover="previewOn('INSERT_ISSUE_NUM_HERE')" onmouseout="previewOff('INSERT_ISSUE_NUM_HERE')" onclick="openViewer('bookviewer', 'INSERT_ISSUE_NUM_HERE')"> <img class="spine" src="../images/library/spines/INSERT_ISSUE_NUM_HERE.png" alt="INSERT_ISSUE_NUM_HERE"> </div>
-~~~
+~~~~
 6. Make sure to replace "INSERT_ISSUE_NUM_HERE" with the issue number of the new spine you are creating
