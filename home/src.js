@@ -1,18 +1,6 @@
 let expanded = false;
 var in_scissor_mouse_block = false; 
 
-function block() {
-    // in_scissor_mouse_block = true; 
-    // let scissor_block_1 = document.getElementById("scissor-block1");
-    // let scissor_block_2 = document.getElementById("scissor-block2");
-}
-
-function unblock() {
-    // in_scissor_mouse_block = false; 
-    // let scissor_block_1 = document.getElementById("scissor-block1");
-    // let scissor_block_2 = document.getElementById("scissor-block2");
-}
-
 function menu() {
     if (expanded) {
         shrink_menu();
@@ -30,14 +18,15 @@ function expand_menu () {
     let top = document.getElementById("top_img");
     let bottom =document.getElementById("bottom_img");
 
-    // // expand the blocking 
-    // let scissor_block_1 = document.getElementById("scissor-block1");
-    // let scissor_block_2 = document.getElementById("scissor-block2");
-    // scissor_block_1.style.height = "28vh";
-    // scissor_block_1.style.left = "11vh";
-
-    // scissor_block_2.style.height = "20vh";
-    // scissor_block_2.style.top = "6.5vh";
+    // make the svg object 
+    // <object data="../images/menu/svgs/full_menu.svg" type="image/svg+xml" class ="svg" id = "svg"></object>
+    var svg = document.createElement("object");
+    svg.setAttribute("data", "../images/menu/svgs/full_menu.svg");
+    svg.setAttribute("type", "image/svg+xml");
+    svg.setAttribute("class", "svg");
+    svg.setAttribute("id", "svg");
+    var wrapper = document.getElementById("svg-wrapper");
+    wrapper.appendChild(svg);
 
     top.animate(
         { transform: ["rotate(0deg)", "rotate(10deg)"] },
@@ -56,7 +45,6 @@ function expand_menu () {
         { duration: 500, fill: "forwards" }
     );
 
-    // is this right tbh 
     menu.style.visibility = "hidden";
     expanded_menu.style.visibility = "visible";
 }
@@ -66,6 +54,10 @@ function shrink_menu() {
     let expanded_menu = document.getElementById("expanded_menu");
     let top = document.getElementById("top_img");
     let bottom =document.getElementById("bottom_img");
+
+    // delete the svg object 
+    var wrapper = document.getElementById("svg-wrapper");
+    wrapper.removeChild(svg);
 
     top.animate(
         { transform: ["rotate(10deg)", "rotate(0deg)"] },
@@ -84,27 +76,11 @@ function shrink_menu() {
         { duration: 500, fill: "forwards" }
     );
 
-    // is this right tbh 
     menu.style.visibility = "visible";
     expanded_menu.style.visibility = "hidden";
 }
 
-// function getImages(){
-//     let images = []
-//
-//     let letters = ["A", "E", "G", "I", "L", "M", "N", "T", "U"]
-//     let src=""
-//     for(let i=0; i< letters.length; i++){
-//         for(let j=1; j < 12; j++){
-//             src = "../images/letters/" + letters[i] + j + ".png"
-//             images.append(src)
-//         }
-//     }
-//     return images
-// }
-// const images = getImages();
-
-const displayDistance = 20 // distance in px to display another photo
+const displayDistance = 15 // distance in px to display another photo
 const nDisplay = 7 // number of pictures to display at once
 
 const images = document.getElementsByClassName("image")

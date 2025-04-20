@@ -43,7 +43,7 @@ function populate(id){
     for (i =1; i < folder_size + 1; i++) {
         let img = document.createElement('img');
         // give the image a source 
-        img.src = '../images/eventPhotos/' + id + '/' + i + '.jpg';
+        img.src = './../images/eventPhotos/' + id + '/' + i + '.jpg';
         // place in appropriate column
         if (left_column) {
             document.getElementById("col1").appendChild(img);
