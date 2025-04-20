@@ -76,89 +76,92 @@ function closeBook(isAtBeginning) {
     nextBtn.style.transform = "translateX(0px)";
 }
 
-// function goNextPage(){
-//     // let paper = "#p" + currentLocation + 1
-//     let id = document.getElementById("p" + currentLocation + 1);
-//
-//     let zIndex = currentLocation + 4;
-//     if(currentLocation <= maxLocation) {
-//         if(currentLocation === tPages){
-//             closeBook(false);
-//         }else if(currentLocation === 0){
-//             openBook();
-//         }
-//         id.classList.add("flipped")
-//         id.style.zIndex = zIndex.toString()
-//     }
-//     currentLocation++;
-// }
-//
-// function goPrevPage(){
-//     // let paper = "#p" + currentLocation + 1
-//     let id = document.getElementById("p" + currentLocation + 1);
-//
-//     let zIndex = maxLocation - currentLocation + 3;
-//     if(currentLocation > 0 && currentLocation <= tPages){
-//         if(currentLocation === 1){
-//             closeBook(true);
-//         }else if(currentLocation === tPages){
-//             openBook();
-//         }
-//         id.classList.remove("flipped")
-//         id.style.zIndex = zIndex.toString()
-//     }
-//     currentLocation--;
-// }
+function goNextPage(){
+    let index = currentLocation + 1;
+    // let paper = "#p" + currentLocation + 1
+    let id = document.getElementById("p" + index.toString());
 
-
-function goNextPage() {
-    if(currentLocation < maxLocation) {
-        switch(currentLocation) {
-            case 0:
-                openBook();
-                p1.classList.add("flipped");
-                p1.style.zIndex = "4";
-                break;
-            case 1:
-                p2.classList.add("flipped");
-                p2.style.zIndex = "5";
-                break;
-            case 2:
-                p3.classList.add("flipped");
-                p3.style.zIndex = "6";
-                closeBook(false);
-                break;
-            default:
-                throw new Error("unknown state");
+    let zIndex = currentLocation + 4;
+    if(currentLocation <= maxLocation) {
+        if(currentLocation === tPages){
+            closeBook(false);
+        }else if(currentLocation === 0){
+            openBook();
         }
-        currentLocation++;
+        id.classList.add("flipped");
+        id.style.zIndex = zIndex;
     }
+    currentLocation++;
 }
 
-function goPrevPage() {
-    if(currentLocation > 0) {
-        switch(currentLocation) {
-            case 1:
-                closeBook(true);
-                p1.classList.remove("flipped");
-                p1.style.zIndex = 3+3;
-                break;
-            case 2:
-                p2.classList.remove("flipped");
-                p2.style.zIndex = 2+3;
-                break;
-            case 3:
-                openBook();
-                p3.classList.remove("flipped");
-                p3.style.zIndex = 1+3;
-                break;
-            default:
-                throw new Error("unkown state");
-        }
+function goPrevPage(){
+    let index = currentLocation + 1;
 
-        currentLocation--;
+    // let paper = "#p" + currentLocation + 1
+    let id = document.getElementById("p" + index.toString());
+
+    let zIndex = maxLocation - currentLocation + 3;
+    if(currentLocation > 0 && currentLocation <= tPages){
+        if(currentLocation === 1){
+            closeBook(true);
+        }else if(currentLocation === tPages){
+            openBook();
+        }
+        id.classList.remove("flipped")
+        id.style.zIndex = zIndex.toString()
     }
+    currentLocation--;
 }
+
+
+// function goNextPage() {
+//     if(currentLocation < maxLocation) {
+//         switch(currentLocation) {
+//             case 0:
+//                 openBook();
+//                 p1.classList.add("flipped");
+//                 p1.style.zIndex = 1+3;
+//                 break;
+//             case 1:
+//                 p2.classList.add("flipped");
+//                 p2.style.zIndex = 2+3;
+//                 break;
+//             case 2:
+//                 p3.classList.add("flipped");
+//                 p3.style.zIndex = 3+3;
+//                 closeBook(false);
+//                 break;
+//             default:
+//                 throw new Error("unknown state");
+//         }
+//         currentLocation++;
+//     }
+// }
+
+// function goPrevPage() {
+//     if(currentLocation > 0) {
+//         switch(currentLocation) {
+//             case 1:
+//                 closeBook(true);
+//                 p1.classList.remove("flipped");
+//                 p1.style.zIndex = 3+3;
+//                 break;
+//             case 2:
+//                 p2.classList.remove("flipped");
+//                 p2.style.zIndex = 2+3;
+//                 break;
+//             case 3:
+//                 openBook();
+//                 p3.classList.remove("flipped");
+//                 p3.style.zIndex = 1+3;
+//                 break;
+//             default:
+//                 throw new Error("unkown state");
+//         }
+//
+//         currentLocation--;
+//     }
+// }
 
 function exit(iD){
     location.reload()
@@ -176,7 +179,7 @@ function openMenu(){
 function openViewer(iD, elmt){
     let x = document.getElementById(iD);
     x.style.display = "flex"
-    createBook("zine1", 3)
+    createBook("zine1", 20)
 }
 
 function previewOn(Spine, Cover){
