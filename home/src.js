@@ -110,16 +110,20 @@ function mouseDistance(x, y){
 }
 
 // onmousemove
-window.onmousemove = e => {
-    if (mouseDistance(e.clientX, e.clientY) > displayDistance){
-        let activePic = images[globalIndex % images.length]
-        // let inactivePic = images[(globalIndex - nDisplay) % images.length]
-
-        activatePic(activePic, e.clientX, e.clientY)
-        // if (inactivePic){inactivePic.dataset.status = "inactive"}
-
-        globalIndex++
-    }
+window.onload = function() {
+    setTimeout(function() {
+        window.onmousemove = e => {
+            if (mouseDistance(e.clientX, e.clientY) > displayDistance){
+                let activePic = images[globalIndex % images.length]
+                // let inactivePic = images[(globalIndex - nDisplay) % images.length]
+        
+                activatePic(activePic, e.clientX, e.clientY)
+                // if (inactivePic){inactivePic.dataset.status = "inactive"}
+        
+                globalIndex++
+            }
+        }
+    }, 3000)
 }
 
 function turnpink(id) {
