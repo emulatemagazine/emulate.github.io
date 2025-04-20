@@ -61,8 +61,8 @@ function createBook(issue, numPg){
 
 function openBook() {
     book.style.transform = "translateX(50%)";
-    prevBtn.style.transform = "translateX(-180px)";
-    nextBtn.style.transform = "translateX(180px)";
+    prevBtn.style.transform = "translateX(-27vh)";
+    nextBtn.style.transform = "translateX(27vh)";
 }
 
 function closeBook(isAtBeginning) {

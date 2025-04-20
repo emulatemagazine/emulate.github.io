@@ -32,7 +32,12 @@ body{
     color: white;
     text-align: center;
 
+    height: fit-content;
+    padding-top: 2em;
+    padding-bottom: 5em;
+
     grid-area: 2 / 2 / 3 / 3;
+    background-color: #27293D;
 }
 
 .title{

@@ -1,3 +1,7 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body{
     width: 100vh;
     height: 100vh;
@@ -100,13 +104,14 @@ body{
 
 .coreImg{
     position: absolute;
-    z-index: -1;
+    z-index: -10;
     /*aspect-ratio: 1;*/
 
     top: 50%;
     left: 45%;
     transform: translate(-50%, -50%);
     width: 70%;
+    max-width: 1000px;
     height: auto;
     /*height: 70vh;*/
 
@@ -117,9 +122,10 @@ body{
     position: absolute;
     z-index: 1;
 
-    width: 30vh;
-    top: 45vh;
-    left: 35vh;
+    max-width: 300px;
+    width: 20%;
+    top: 45%;
+    left: 20%;
     margin: 0 auto;
 }
 
@@ -169,18 +175,6 @@ body{
     background-size: cover;}
 .outer4 { grid-area: 5 / 2 / 6 / 5;}
 
-.bg {
-    width: 100%;
-    height: 270vh;
-
-    position: absolute;
-    top: 95vh;
-    z-index: 0;
-    background-image: url(../images/backgrounds/blueFabric.jpg);
-    background-repeat: repeat;
-    background-size: cover;
-}
-
 .recents {
     position: absolute;
     z-index: 10;
@@ -190,20 +184,21 @@ body{
     width: 100%;
 }
 .recents img{
-    width: 80vh;
+    width: 40%;
 }
 
 .emulate{
-    width: 10vh;
-    height: 20vh;
+    width: 40%;
+    height: auto;
 
     position: absolute;
     top: 50vh;
-    left: 85vh;
+    left: 50%;
 }
 
 .emulate_img{
-    height: 20vh;
+    /*width: 20vh;*/
+    width: 100%;
     z-index: 999;
 }
 
@@ -248,11 +243,22 @@ body{
 .div5 { grid-area: 3 / 2 / 4 / 3; }
 .div6 { grid-area: 3 / 3 / 4 / 4; }
 
+.bg {
+    width: 100%;
+    height: 200vh;
 
+    position: absolute;
+    top: 95%;
+    z-index: 0;
+    background-image: url(../images/backgrounds/blueFabric.jpg);
+    /*background-color: red;*/
+}
 .recent-work {
-    position: absolute; 
-    top: 120vh;
-    width: 200vh;
+    position: absolute;
+    top:15vh;
+    /*top: 105vh;*/
+    width: 100%;
+        /*background-color: red;*/
     
     display: grid;
     grid-template-columns: 0.5fr, 1fr, 1fr, 0.5fr;
@@ -262,9 +268,11 @@ body{
 }
     
 .col1 { grid-area: 1 / 2 / 2 / 3; }
-.col2 { grid-area: 1 / 3 / 2 / 4;}
+.col2 { grid-area: 1 / 3 / 2 / 4;
+padding-right: 40px}
 
 .left-margin{
+    /*background-color: blue;*/
     grid-area: 1 / 1 / 2 / 2;
 }
 .right-margin{
