@@ -87,7 +87,7 @@ a:hover{
 body{
     margin: 0;
     /*background-color: blue;*/
-    background-image: url("../_archive/backgrounds/greenGrid.jpg");
+    background-image: url("../images/backgrounds/greenGrid.jpg");
     /*background-repeat: repeat;*/
     /*background-size: cover;*/
 }
@@ -157,26 +157,26 @@ body{
 }
 
 #buddy{
-    background-image: url("../_archive/bio_pics/tiles/tile6.jpg");
+    background-image: url("../images/bio_pics/tiles/tile6.jpg");
     background-size: cover;
 }
 
 #ruthie{
-    background-image: url("../_archive/bio_pics/tiles/tile2.jpg");
+    background-image: url("../images/bio_pics/tiles/tile2.jpg");
     background-size: cover;
 }
 
 #isabelle{
-    background-image: url("../_archive/bio_pics/tiles/tile5.jpg");
+    background-image: url("../images/bio_pics/tiles/tile5.jpg");
     background-size: cover;
 }
 
 #maggie {
-    background-image: url("../_archive/bio_pics/tiles/tile4.jpg");
+    background-image: url("../images/bio_pics/tiles/tile4.jpg");
     background-size: cover;
 }
 
 #ruby{
-    background-image: url("../_archive/bio_pics/tiles/tile1.jpg");
+    background-image: url("../images/bio_pics/tiles/tile1.jpg");
     background-size: cover;
 }

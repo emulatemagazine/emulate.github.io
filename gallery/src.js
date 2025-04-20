@@ -43,7 +43,7 @@ function populate(id){
     for (i =1; i < folder_size + 1; i++) {
         let img = document.createElement('img');
         // give the image a source 
-        img.src = '../_archive/eventPhotos/' + id + '/' + i + '.jpg';
+        img.src = '../images/eventPhotos/' + id + '/' + i + '.jpg';
         // place in appropriate column
         if (left_column) {
             document.getElementById("col1").appendChild(img);
@@ -125,7 +125,7 @@ function randomElement(){
     }
 
     let element = document.getElementById(id);
-    let image = '../_archive/collageElements/' + currentImg + '.png';
+    let image = '../images/collageElements/' + currentImg + '.png';
     element.src = image;
     random_rotate(id)
 }
@@ -138,7 +138,7 @@ function change_color(id) {
     let elem  = document.getElementById(id);
     // need to change the photo for this one 
     if (id=="emulate"){
-        elem.src = "../_archive/emulate/emulate_pink.png";
+        elem.src = "../images/emulate/emulate_pink.png";
     } else {
         elem.style.color = "HotPink";
     }
@@ -148,7 +148,7 @@ function change_back(id) {
     let elem  = document.getElementById(id);
     // need to change the photo for this one 
     if (id=="emulate"){
-        elem.src = "../_archive/emulate/emulate_white.png";
+        elem.src = "../images/emulate/emulate_white.png";
     } else {
         elem.style.color = "white";
     }

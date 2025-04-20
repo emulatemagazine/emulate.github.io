@@ -49,9 +49,9 @@ function createBook(issue, numPg){
 
         let fimg = document.createElement("img")
         let bimg = document.createElement("img")
-        fimg.src = '../_archive/library/magazines/zine1/' + pg + '.png'
+        fimg.src = '../images/library/magazines/zine1/' + pg + '.png'
         pg++
-        bimg.src = '../_archive/library/magazines/zine1/' + pg + '.png'
+        bimg.src = '../images/library/magazines/zine1/' + pg + '.png'
         pg++
         f.append(fimg)
         b.append(bimg)

@@ -96,7 +96,7 @@ function shrink_menu() {
 //     let src=""
 //     for(let i=0; i< letters.length; i++){
 //         for(let j=1; j < 12; j++){
-//             src = "../_archive/letters/" + letters[i] + j + ".png"
+//             src = "../images/letters/" + letters[i] + j + ".png"
 //             images.append(src)
 //         }
 //     }

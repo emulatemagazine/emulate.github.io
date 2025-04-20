@@ -2,7 +2,7 @@ body{
     width: 100vh;
     height: 100vh;
 
-    background-image: url(../_archive/buddys_stuff/coreTeamPixel.png);
+    background-image: url(../images/buddys_stuff/coreTeamPixel.png);
     background-repeat: repeat;
     background-size: cover;
     margin: 0;
@@ -150,15 +150,15 @@ body{
 }
 
 .outer1 { grid-area: 1 / 1 / 2 / 6;
-    background-image: url(../_archive/backgrounds/blueFabric.jpg);
+    background-image: url(../images/backgrounds/blueFabric.jpg);
     background-repeat: repeat;
     background-size: cover;}
 .outer2 { grid-area: 2 / 1 / 6 / 2;
-    background-image: url(../_archive/backgrounds/blueFabric.jpg);
+    background-image: url(../images/backgrounds/blueFabric.jpg);
     background-repeat: repeat;
     background-size: cover;}
 .outer3 { grid-area: 2 / 5 / 6 / 6;
-    background-image: url(../_archive/backgrounds/blueFabric.jpg);
+    background-image: url(../images/backgrounds/blueFabric.jpg);
     background-repeat: repeat;
     background-size: cover;}
 .outer4 { grid-area: 5 / 2 / 6 / 5;}
@@ -170,7 +170,7 @@ body{
     position: absolute;
     top: 95vh;
     z-index: 0;
-    background-image: url(../_archive/backgrounds/blueFabric.jpg);
+    background-image: url(../images/backgrounds/blueFabric.jpg);
     background-repeat: repeat;
     background-size: cover;}
 

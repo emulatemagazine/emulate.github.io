@@ -110,7 +110,7 @@ function randomElement(){
     }
 
     let element = document.getElementById(id);
-    let image = '../_archive/collageElements/' + currentImg + '.png';
+    let image = '../images/collageElements/' + currentImg + '.png';
     element.src = image;
     random_rotate(id)
 }

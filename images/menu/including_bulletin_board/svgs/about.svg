@@ -1,4 +1,4 @@
-<<<<<<<< Updated upstream:_archive/menu/including_bulletin_board/svgs/about.svg
+<<<<<<<< Updated upstream:images/menu/including_bulletin_board/svgs/about.svg
 ========
 <!DOCTYPE html>
 <html lang="en">
@@ -12,65 +12,65 @@
 <div class = "background">
     <!-- Scissors-->
     <div class="scissors" id = "top" onclick="expand_menu()">
-        <img src="../_archive/scissors/scissorsTop.png" class = "scissor_img_top"></img>
+        <img src="../images/scissors/scissorsTop.png" class = "scissor_img_top"></img>
     </div>
     <div class="scissors" id = "bottom" onclick = "expand_menu()">
-        <img src="../_archive/scissors/scissorsBottom.png" class = "scissor_img_bottom"></img>
+        <img src="../images/scissors/scissorsBottom.png" class = "scissor_img_bottom"></img>
     </div>
 
     <!-- Menu -->
     <div class = "menu" onclick = "expand_menu()">
-        <img src = "../_archive/menu/menu.png" class = "menu_img" id = "menu"></img>
+        <img src = "../images/menu/menu.png" class = "menu_img" id = "menu"></img>
     </div>
 
     <!-- Expanded Menu -->
     <div class = "expanded_menu">
     </div>
     <div class = "expanded_menu">
-        <img src = "../_archive/menu/full_menu.png" class = "expanded_menu_img" id = "expanded_menu"></img>
+        <img src = "../images/menu/full_menu.png" class = "expanded_menu_img" id = "expanded_menu"></img>
     </div>
 
     <!-- Emulate -->
     <div class = "emulate">
-        <img src = "../_archive/emulate/ripped_paper_no_background.png" class = "emulate_img"></img>
+        <img src = "../images/emulate/ripped_paper_no_background.png" class = "emulate_img"></img>
     </div>
 
     <div class = "new_work">
         <div class = "div1">
             new work 1
             <div></div>
-            <img src = "../_archive/doodles/1.png"></img>
+            <img src = "../images/doodles/1.png"></img>
         </div>
         <div class = "div2">
             new work 2
             <div></div>
-            <img src = "../_archive/doodles/2.png"><div></div></img>
+            <img src = "../images/doodles/2.png"><div></div></img>
         </div>
         <div class = "div3">
             new work 3
             <div></div>
-            <img src = "../_archive/doodles/3.png"><div></div></img>
+            <img src = "../images/doodles/3.png"><div></div></img>
         </div>
         <div class = "div4">
             new work 4
             <div></div>
-            <img src = "../_archive/doodles/4.png"><div></div></img>
+            <img src = "../images/doodles/4.png"><div></div></img>
         </div>
     </div>
 
    <!--
     <div class = "star">
-        <img src = "_archive/png_doodles/fast-animation.png" class = "star_img"></img>
+        <img src = "images/png_doodles/fast-animation.png" class = "star_img"></img>
     </div>
 
     <div class = "star2">
-        <img src = "_archive/png_doodles/fast-animation.png" class = "star2_img"></img>
+        <img src = "images/png_doodles/fast-animation.png" class = "star2_img"></img>
     </div>
     -->
 
     <!--
     <div class = "bulletin-board">
-        <img src="_archive/backgrounds/bulletinBoard.png" alt="bulletin-board">
+        <img src="images/backgrounds/bulletinBoard.png" alt="bulletin-board">
     </div>
     -->
 </div>
