@@ -244,18 +244,30 @@ body{
 
 
 .recent-work {
-    width: 70vh;
+    position: absolute; 
+    top: 120vh;
+    width: 200vh;
+    
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 0.5fr, 1fr, 1fr, 0.5fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 10px;
+    grid-column-gap: 30px;
     grid-row-gap: 0px;
 }
     
-.col1 { grid-area: 1 / 1 / 2 / 2; }
-.col2 { grid-area: 1 / 2 / 2 / 3; }
+.col1 { grid-area: 1 / 2 / 2 / 3; }
+.col2 { grid-area: 1 / 3 / 2 / 4;}
+
+.left-margin{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.right-margin{
+    grid-area: 1 / 4 / 2 / 5;
+}
 .recent_cover{
     border: 5px solid white;
+    object-fit: cover;
+    max-width: 100%;
 }
 .caption {
     font-family: 'Spectral', 'Courier New', monospace;
@@ -263,3 +275,11 @@ body{
     color: white;
     font-style: italic;
 }
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }

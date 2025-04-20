@@ -121,3 +121,18 @@ window.onmousemove = e => {
         globalIndex++
     }
 }
+
+function turnpink(id) {
+    var elem = document.getElementById(id);
+    elem.style.borderColor = "hotpink";
+
+    var caption = document.getElementById(id + "_caption");
+    caption.style.color = "hotpink";
+}
+
+function turnback(id) {
+    var elem = document.getElementById(id);
+    elem.style.borderColor = "white";
+    var caption = document.getElementById(id + "_caption");
+    caption.style.color = "white";
+}
