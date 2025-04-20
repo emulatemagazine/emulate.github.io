@@ -1,0 +1,230 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    width: 100vh;
+    height: 100vh;
+
+    background-image: url(../_archive/backgrounds/graphpaper.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    margin: 0;
+
+    overflow-x: hidden;
+}
+
+.scissors{
+    width: 30vh;
+    /* This height causes the two scissor images to overlap */
+    height: 0vh;
+
+    position: relative;
+    top: -4vh;
+    left: 10vh;
+    z-index: 999;
+}
+
+.scissor_img_top{
+    height: 40vh;
+    width: auto;
+    rotate: -90deg;
+}
+
+.scissor_img_bottom{
+    height: 40vh;
+    width: auto;
+    rotate: -90deg;
+}
+
+.menu{
+    width: 10vh;
+    height: 5vh;
+
+    position: relative;
+    top: 12vh;
+    left: 35vh;
+    z-index: 2;
+
+}
+
+.menu_img{
+    width: 20vh;
+    z-index: 2;
+}
+
+.expanded_menu{
+    position: relative;
+    top: -5vh;
+    left: 35vh;
+    visibility: hidden;
+}
+
+.expanded_menu_img{
+    position: absolute;
+    width: 38vh;
+    z-index: 4;
+}
+
+.svg{
+    width: 38vh;
+    position: absolute;
+    top: 0vh;
+    left: 35vh;
+    z-index: 4;
+    /* This allows the svg to be invisible 
+    but still clickable */
+    opacity: 0;
+}
+
+.coreImg{
+    position: absolute;
+    z-index: -1;
+
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+
+    margin: 0 auto;
+}
+
+.website {
+    position: absolute;
+    z-index: 2;
+
+    width: 35vh;
+    top: 40vh;
+    left: 35vh;
+    margin: 0 auto;
+}
+
+
+/*IMAGE TRAIL*/
+.trailcontainer {
+    width: 80%;
+    height: 90vh;
+    position: absolute;
+    /*background-color: blue;*/
+    z-index: 1;
+
+}
+.image{
+    width: 150px;
+    position: absolute;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+
+/*OVERLAY*/
+.overlay {
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+
+
+    position: absolute;
+    display: grid;
+
+    grid-template-columns: .05fr repeat(3, 1fr) .05fr;
+    grid-template-rows: .15fr repeat(3, 1fr) .15fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+.outer1 { grid-area: 1 / 1 / 2 / 6;
+    background-image: url(../_archive/backgrounds/blueFabric.jpg);
+    background-repeat: repeat;
+    background-size: cover;}
+.outer2 { grid-area: 2 / 1 / 6 / 2;
+    background-image: url(../_archive/backgrounds/blueFabric.jpg);
+    background-repeat: repeat;
+    background-size: cover;}
+.outer3 { grid-area: 2 / 5 / 6 / 6;
+    background-image: url(../_archive/backgrounds/blueFabric.jpg);
+    background-repeat: repeat;
+    background-size: cover;}
+.outer4 { grid-area: 5 / 2 / 6 / 5;}
+
+.bg {
+    width: 100%;
+    height: 150vh;
+
+    position: absolute;
+    top: 95vh;
+    z-index: 3;
+    background-image: url(../_archive/backgrounds/blueFabric.jpg);
+    background-repeat: repeat;
+    background-size: cover;}
+
+
+
+
+.recents {
+    position: absolute;
+    z-index: 10;
+
+    top: 90vh;
+    left: 10vh;
+    width: 100%;
+}
+.recents img{
+    width: 750px;
+}
+
+.emulate{
+    width: 10vh;
+    height: 20vh;
+
+    position: absolute;
+    top: 50vh;
+    left: 85vh;
+    z-index: 2;
+
+}
+
+.emulate_img{
+    height: 20vh;
+    z-index: 999;
+}
+
+.star{
+    position: absolute;
+    top: 43vh;
+    left: 60vh;
+}
+
+.star_img{
+    width: 10vh;
+    visibility: visible;
+    rotate: 10deg;
+}
+
+.star2{
+    position: absolute;
+    top: 65vh;
+    left: 120vh;
+}
+
+.star2_img{
+    width: 10vh;
+    visibility: visible;
+    rotate: -20deg;
+}
+
+.new_work{
+    position: absolute;
+    top: 90vh;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 2fr) 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+.div1 { grid-area: 1 / 2 / 2 / 3; }
+.div2 { grid-area: 1 / 3 / 2 / 4;}
+.div3 { grid-area: 2 / 2 / 3 / 3; }
+.div4 { grid-area: 2 / 3 / 3 / 4; }
+.div5 { grid-area: 3 / 2 / 4 / 3; }
+.div6 { grid-area: 3 / 3 / 4 / 4; }

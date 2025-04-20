@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
+
+    <title>Emulate Magazine</title>
+</head>
+
+<header>
+    
+    <h1> <a href="../home page/main.html">
+        <img src = "../_archive/emulate/emulate_white.png" onmouseover = "change_color('emulate')" onmouseout = "change_back('emulate')"class="emulate" id = "emulate"></img> </a></h1>
+    <div class="navigation">
+        <ul>
+            <li><button class="halloween" id="halloween" onclick="populate('halloween')" onmouseover = "change_color('halloween')" onmouseout = "change_back('halloween')">halloween</button></li>
+            <li><button class="yule" id="yule" onclick="populate('yule')" onmouseover = "change_color('yule')" onmouseout = "change_back('yule')">yule</button></li>
+            <li><button class="april-fools" id="april-fools" onclick="populate('april-fools')" onmouseover = "change_color('april-fools')" onmouseout = "change_back('april-fools')">april fool's</button></li>
+        </ul>
+    </div>
+
+
+</header>
+<body>
+    <div class="row">
+        <div class="col" id="col1">
+
+        </div>
+
+        <div class="col" id="col2">
+
+        </div>
+
+    </div>
+
+    <div id="zoomed">
+
+    </div>
+
+    <!-- Collage section, I'm commenting it out for now -->
+    <!--
+    <div class="parent">
+        <div class="a">
+            <img id="-a" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="b">
+            <img id="-b" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="c">
+            <img id="-c" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="d">
+            <img id="-d" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="e">
+            <img id="-e" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="f">
+            <img id="-f" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="g">
+            <img id="-g" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="h">
+            <img id="-h" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="i">
+            <img id="-i" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="j">
+            <img id="-j" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="k">
+            <img id="-k" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="l">
+            <img id="-l" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="m">
+            <img id="-m" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="n">
+            <img id="-n" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="o" >
+            <img id="-o" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+
+
+        <div class="Aa">
+        </div>
+        <div class="Bb">
+        </div>
+        <div class="Cc">
+        </div>
+        <div class="Dd">
+        </div>
+        <div class="Ee">
+        </div>
+        <div class="Ff">
+        </div>
+        <div class="Gg">
+        </div>
+        <div class="Hh">
+        </div>
+        <div class="Ii">
+        </div>
+        <div class="Jj">
+        </div>
+        <div class="Kk">
+        </div>
+        <div class="Ll">
+        </div>
+        <div class="Mm">
+        </div>
+        <div class="Nn">
+        </div>
+        <div class="Oo">
+        </div>
+
+        <div class="A" >
+            THIS WAS PREVIOUSLY COMMENTED OUT 
+            <img id="A-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="B" >
+            THIS WAS PREVIOUSLY COMMENTED OUT 
+            <img id="B-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="C" >
+            <img id="C-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="D" >
+            <img id="D-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="E" >
+            <img id="E-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="F" >
+            <img id="F-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="G" >
+            <img id="G-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="H" >
+            <img id="H-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="I" >
+            <img id="I-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="J" >
+            <img id="J-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="K" >
+            <img id="K-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="L" >
+            <img id="L-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="M" >
+            <img id="M-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="N" >
+            <img id="N-"class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+        <div class="O" >
+            <img id="O-" class="element" src="../_archive/collageElements/Empty.png" alt="image"></img>
+        </div>
+    </div>
+    -->
+
+</body>
+
+
+<script src="src.js">
+    // when the gallery page is loaded, display the most recent event
+    window.addEventListener("load", populate('april-fools'));
+</script>
+</html>

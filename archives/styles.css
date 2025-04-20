@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    /*background-color: #e6e1d3;*/
+    background-image: url("../_archive/backgrounds/fabric.jpg");
+    background-size: cover;
+
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
+    overflow-x: hidden;
+}
+
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: hotpink;
+}
+
+header {
+    position: fixed;
+    /*display: inline-flex;*/
+    z-index: 1;
+    text-align: center;
+
+    color: black;
+    top:0;
+
+    font-family: "Spectral", serif;
+    font-style: italic;
+    width: 100%;
+
+    /*padding-bottom: .5em;*/
+    padding: 1em;
+}
+/*.EMULATE {*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+
+/*    background-color: red;*/
+/*}*/
+
+.scissors{
+    position: absolute;
+    height: 40px;
+    /*max-width: 50px;*/
+    left: 25px;
+    top: 25px;
+
+    transform: rotate(210deg);
+
+}
+.menu {
+    display: none;
+}
+.menu img{
+    /*display: block;*/
+    position: absolute;
+    height: 300px;
+    /*background-color: white;*/
+    transform: rotate(40deg);
+    left: 50px;
+    top: -10px;
+}
+.svg{
+    position: absolute;
+    height: 300px;
+    /*background-color: white;*/
+    transform: rotate(40deg);
+    left: 50px;
+    top: -10px;
+    /* This allows the svg to be invisible
+    but still clickable */
+    opacity: 0;
+}
+
+
+
+/*.lib {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+/*    grid-template-rows: 1fr;*/
+/*    gap: 0 0;*/
+
+/*    height: 90vh;*/
+/*    top: 500px;*/
+/*    bottom: 0;*/
+
+/*    grid-auto-flow: row;*/
+/*    grid-template-areas:*/
+/*      "vol1-1 vol1-2 vol2-1 vol2-2 vol3-1 vol3-2 vol4-1 vol4-2 vol5-1 vol5-2 zine1";*/
+/*}*/
+
+/*.vol1-1 { grid-area: vol1-1; }*/
+/*.vol1-2 { grid-area: vol1-2; }*/
+/*.vol2-1 { grid-area: vol2-1; }*/
+/*.vol2-2 { grid-area: vol2-2; }*/
+/*.vol3-1 { grid-area: vol3-1; }*/
+/*.vol3-2 { grid-area: vol3-2; }*/
+/*.vol4-1 { grid-area: vol4-1; }*/
+/*.vol4-2 { grid-area: vol4-2; }*/
+/*.vol5-1 { grid-area: vol5-1; }*/
+/*.vol5-2 { grid-area: vol5-2; }*/
+/*.zine1 { grid-area: zine1; }*/
+
+
+
+
+
+
+
+.bookviewer{
+    position: fixed;
+    width: 95%;
+    height: 95vh;
+    z-index: 3;
+
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+
+    /*display: none;*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(6px);
+    border-style: solid;
+    /*opacity: 0.5;*/
+}
+.x-btn{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+/*FLIPBOOK*/
+/* Book */
+.book {
+    position: relative;
+    width: 52vh;
+    height: 80vh;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    /*background-color: white;*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    /*border-left: 3px solid black;*/
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+.front-content img, .back-content img{
+    width: 100%
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+/*button:focus {*/
+/*    outline: none;*/
+/*}*/
+
+/*button:hover i {*/
+/*    color: #636363;*/
+/*}*/
+
+/*i {*/
+/*    font-size: 50px;*/
+/*    color: gray;*/
+/*}*/
+
+
+.content {
+    position: absolute;
+    display: block;
+
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+
+    top: 50px;
+    margin: 0 auto;
+
+    height: fit-content;
+    width: 100%;
+}
+
+/*
+LIBRARY STYLING
+*/
+
+.lib{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 0;
+
+    display: inline-flex;
+    align-items: flex-end;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    float: left;
+
+    margin: auto;
+    padding: 0;
+
+    white-space: normal;
+    /*overflow: hidden;*/
+
+    max-width: 90%;
+    height: fit-content;
+}
+
+.issue{
+    flex: 1 0 100px;
+    display: inline;
+    /*display: flex;*/
+    /*float: left;*/
+    /*align-items: flex-end;*/
+    z-index: 0;
+    /*width: 150px;*/
+
+    max-width: 160px;
+    min-width: 110px;
+    height: fit-content;
+    padding-top: 50px;
+
+    /*background-color: red;*/
+
+    /*margin: 0 auto;*/
+}
+
+.spine{
+    display: inline;
+
+    margin: 0 auto;
+    flex: 1 1 auto;
+    z-index: 0;
+
+    /*max-width: fit-content;*/
+    /*box-shadow: -10px -10px #27293D;*/
+
+    max-width: 150px;
+    min-width: 100px;
+
+    width: 100%;
+    /*max-height: 700px;*/
+
+    bottom: 0;
+}
+
+.cover{
+    position: absolute;
+    display: inline;
+    /*width: 500px;*/
+
+    transform: rotate3d(0, 1, 0, 80deg) translateX(-500px);
+}
+
+.TOC{
+    display: inline-flex;
+    align-items: flex-end;
+    position: relative;
+
+    left: 15%;
+    top: 10vh;
+
+}
+.TOC ul{
+    list-style-type: none;
+}
+.TOC li{
+    font-size: xxx-large;
+    font-family: "Prata", "Spectral", serif;
+}
+.TOC img{
+    max-height: 1em;
+    margin: 0 auto;
+    bottom: 0;
+}
+.year{
+    font-size: xx-large;
+    font-family: "Karla", monospace;
+    vertical-align: top;
+}
+
+
+.arrow {
+    height: 100px;
+}
+
+.prev {
+    transform: scaleX(-1);
+}
+
+
+footer {
+    position: relative;
+    height: 100px;
+    background-color: red;
+
+}

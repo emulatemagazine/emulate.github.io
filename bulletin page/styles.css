@@ -1,0 +1,252 @@
+html{
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    position: relative;
+    margin:0;
+    background-color: #fffaf0;
+
+
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}
+
+
+/* NAV BAR */
+.header {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    /*top: 0;*/
+}
+
+.EMULATE {
+    font-family: "Spectral", serif;
+    font-style: italic;
+}
+
+
+
+
+
+/* BULLETIN BOARD */
+.bulletin-board{
+    /*position: center;*/
+    margin: 25% auto auto;
+    top: 15%;
+
+    height: 80vh;
+    width: 80%;
+
+    background-color: #fffaf0;
+    border: 1px solid black;
+}
+/*.bulletin::-webkit-scrollbar-track{*/
+/*    background-color: white;*/
+/*}*/
+/*.bulletin::-webkit-scrollbar-thumb{*/
+/*    background-color: black;*/
+/*}*/
+/*.bulletin::-webkit-scrollbar-thumb:hover {*/
+/*    background: blue;*/
+/*}*/
+
+.bulletin:active{
+    cursor: grabbing;
+}
+.bulletin {
+    cursor: grab;
+    position: absolute;
+    display: grid;
+    z-index: 8;
+    overflow-x: hidden;
+    -ms-overflow-x: hidden;
+
+    background-color: #fffaf0;
+    border: 1px solid black;
+    box-shadow: 5px 5px black;
+
+    font-family: NT Bau Mono, monospace;
+}
+
+.content {
+    overflow-y: auto;
+    background-color: #fffaf0;
+    /**/
+    scrollbar-color: black #fffaf0;
+    scrollbar-gutter: auto;
+    /*scrollbar-width: thin;*/
+
+    text-align: start;
+}
+
+.content p{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.bulletin-header:active{
+    cursor: grabbing;
+}
+
+.bulletin-header {
+    position: sticky;
+    z-index: 9;
+    cursor: grab;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: all;
+
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+
+    background-color: #fffaf0;
+    border-bottom: 1px solid black;
+    color: black;
+    font-family: NT Bau Mono, monospace;
+
+}
+
+
+.x-btn {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+    width: 30px;
+
+    background: red;
+    color: #fffaf0;
+    border: 2px solid darkred;
+    font-family: NT Bau Mono, monospace;
+}
+
+#welcome {
+    text-align: center;
+
+    width: 250px;
+    height: 250px;
+
+}
+
+#zine {
+    height: fit-content;
+}
+
+/*.def{*/
+/*    position: absolute;*/
+/*    bottom: 2%;*/
+/*    right: 2%;*/
+
+/*    text-align: center;*/
+/*    */
+/*    border: 1px solid black;*/
+/*}*/
+
+.spacer{
+    position: absolute;
+    bottom: 0;
+
+    height: 10vh;
+    width: 100%;
+
+    /*background-color: blue;*/
+}
+
+
+
+/*random collage elements overlay*/
+.parent {
+    height: 100vh;
+    width: 100%;
+    top: 20%;
+    display: grid;
+    /*position: relative;*/
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "A . Aa . a"
+        "B . Bb . b"
+        "C . Cc . c"
+        "D . Dd . d"
+        "E . Ee . e";
+    /*"F . Ff . f"*/
+    /*"G . Gg . g"*/
+    /*"H . Hh . h"*/
+    /*"I . Ii . i"*/
+    /*"J . Jj . j"*/
+    /*"K . Kk . k"*/
+    /*"L . Ll . l"*/
+    /*"M . Mm . m"*/
+    /*"N . Nn . n"*/
+    /*"O . Oo . o";*/
+
+    margin: 0;
+}
+
+.a { grid-area: a;
+    z-index: 999;}
+.b { grid-area: b;
+    z-index: 999;}
+.c { grid-area: c;
+    z-index: 999;}
+.d { grid-area: d;
+    z-index: 999;}
+.e { grid-area: e;
+    z-index: 999;}
+
+
+
+.A { grid-area: A;
+    z-index: 999;}
+.B { grid-area: B;
+    z-index: 999;}
+.C { grid-area: C;
+    z-index: 999;}
+.D { grid-area: D;
+    z-index: 999;}
+.E { grid-area: E;
+    z-index: 999;}
+
+.element {
+    display: block;
+    position: fixed;
+    max-width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+
+    -webkit-filter: drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px -2px 0 white);
+    filter:drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px -2px 0 white);
+
+    /*border: 3px solid white;*/
+}

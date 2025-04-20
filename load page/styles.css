@@ -1,0 +1,82 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.background{
+    height: 100vh;
+    width: 100%;
+    position: relative; 
+}
+
+body {
+    overflow: hidden;
+    background-color: white;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+.emulating {
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    position: absolute;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0 50% 25%;
+    gap: 0 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . e m u l a t i n g --- . ."
+      ". . . . . click anywhere to enter . . . . .";
+
+    margin: 0;
+    top: 30%;
+    -ms-transform: translateY(30%);
+    transform: translateY(30%);
+}
+
+.e { grid-area: e;}
+
+.m { grid-area: m;}
+
+.u { grid-area: u;}
+
+.l { grid-area: l; }
+
+.a { grid-area: a; }
+
+.t { grid-area: t; }
+
+.i { grid-area: i; }
+
+.n { grid-area: n; }
+
+.g { grid-area: g; }
+
+.--- { grid-area: ---; }
+
+.click { grid-area: click; }
+.anywhere { grid-area: anywhere; }
+.to { grid-area: to; }
+.enter { grid-area: enter; }
+
+.subtitle {
+    display: block;
+    height: 3vh;
+    padding-top: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img{
+    display: block;
+    height: 10vh;
+    /*width: 90%;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
