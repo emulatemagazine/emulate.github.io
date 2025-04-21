@@ -81,7 +81,6 @@ function shrink_menu() {
 }
 
 const displayDistance = 15 // distance in px to display another photo
-const nDisplay = 7 // number of pictures to display at once
 
 const images = document.getElementsByClassName("image")
 
@@ -123,7 +122,7 @@ window.onload = function() {
                 globalIndex++
             }
         }
-    }, 3000)
+    }, 250)
 }
 
 function turnpink(id) {
