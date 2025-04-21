@@ -14,15 +14,14 @@ nextBtn.addEventListener("click", goNextPage);
 
 // Business Logic
 let currentLocation = 0;
-let tPages = 2;
-let maxLocation = tPages + 1;
+let maxLocation = 0;
 let clicked = 0;
 
 function createBook(issue, numPg){
     let pg = 1;
-    tPages = numPg;
+    maxLocation = numPg;
 
-    for (let i = 1; i <= tPages; i++){
+    for (let i = 1; i <= maxLocation; i++){
         let page = document.createElement("div")
         book.append(page)
         page.id = "p" + i;
@@ -49,9 +48,10 @@ function createBook(issue, numPg){
 
         let fimg = document.createElement("img")
         let bimg = document.createElement("img")
-        fimg.src = '../images/library/magazines/zine1/' + pg + '.png'
+        fimg.src = '../images/library/magazines/' + issue + '/' + pg + '.png'
         pg++
-        bimg.src = '../images/library/magazines/zine1/' + pg + '.png'
+        bimg.src = '../images/library/magazines/' + issue + '/' + pg + '.png'
+
         pg++
         f.append(fimg)
         b.append(bimg)
@@ -83,13 +83,13 @@ function goNextPage(){
 
     let zIndex = currentLocation + 4;
     if(currentLocation <= maxLocation) {
-        if(currentLocation === tPages){
+        if(currentLocation === maxLocation-1){
             closeBook(false);
         }else if(currentLocation === 0){
             openBook();
         }
         id.classList.add("flipped");
-        id.style.zIndex = zIndex;
+        id.style.zIndex = zIndex.toString();
     }
     currentLocation++;
 }
@@ -101,42 +101,18 @@ function goPrevPage(){
     let id = document.getElementById("p" + index.toString());
 
     let zIndex = maxLocation - currentLocation + 3;
-    if(currentLocation > 0 && currentLocation <= tPages){
+    if(currentLocation > 0 && currentLocation <= maxLocation){
         if(currentLocation === 1){
             closeBook(true);
-        }else if(currentLocation === tPages){
+        }else if(currentLocation === maxLocation-1){
             openBook();
         }
-        id.classList.remove("flipped")
+        id.classList.remove("flipped");
         id.style.zIndex = zIndex.toString()
     }
     currentLocation--;
 }
 
-
-// function goNextPage() {
-//     if(currentLocation < maxLocation) {
-//         switch(currentLocation) {
-//             case 0:
-//                 openBook();
-//                 p1.classList.add("flipped");
-//                 p1.style.zIndex = 1+3;
-//                 break;
-//             case 1:
-//                 p2.classList.add("flipped");
-//                 p2.style.zIndex = 2+3;
-//                 break;
-//             case 2:
-//                 p3.classList.add("flipped");
-//                 p3.style.zIndex = 3+3;
-//                 closeBook(false);
-//                 break;
-//             default:
-//                 throw new Error("unknown state");
-//         }
-//         currentLocation++;
-//     }
-// }
 
 // function goPrevPage() {
 //     if(currentLocation > 0) {
@@ -176,10 +152,10 @@ function openMenu(){
     }
 }
 
-function openViewer(iD, elmt){
+function openViewer(iD, elmt, numPg){
     let x = document.getElementById(iD);
     x.style.display = "flex"
-    createBook("zine1", 20)
+    createBook(elmt, numPg);
 }
 
 function previewOn(Spine, Cover){
