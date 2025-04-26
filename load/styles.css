@@ -9,6 +9,7 @@ body, html {
     margin: 0;
 }
 
+/* Set the background image */
 .background{
     background-image: url("../images/backgrounds/graphpaper.jpg");
     height: 100vh; 
@@ -16,61 +17,67 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0vh;
 }
 
-.container {
-    height: 100vh;
-    position: relative;
-}
-
+/* Container */
 .emulating {
-    height: fit-content;
-    width: 100%;
-    display: grid;
-    position: absolute;
+    background-image: url("../images/backgrounds/graphpaper.jpg");
+    height: 100vh;
+    width: 100vw;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0 50% 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 2fr repeat(9, 1fr) 2fr;
+    grid-template-rows: 35% 10% 55%;
     gap: 0 10px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". . . . . . . . . . . . . "
-      ". . e m u l a t i n g . ."
-      ". . . . . . click anywhere to enter . . .";
-
+      ". . . . . . . . . . ."
+      "left-margin e m u l a t i n g right-margin"
+      ". . . . . . click anywhere to enter .";
     margin: 0;
-    top: 30%;
+    /* Unclear on what this is for
     -ms-transform: translateY(30%);
-    transform: translateY(30%);
+    transform: translateY(30%); */
 }
+.e { grid-area: e; 
+    place-self: center;}
 
-.e { grid-area: e;}
+.m { grid-area: m;
+    place-self: center;}
 
-.m { grid-area: m;}
+.u { grid-area: u;
+    place-self: center;}
 
-.u { grid-area: u;}
+.l { grid-area: l;
+    place-self: center;}
 
-.l { grid-area: l; }
+.a { grid-area: a; 
+    place-self: center;}
 
-.a { grid-area: a; }
+.t { grid-area: t;
+    place-self: center;}
 
-.t { grid-area: t; }
+.i { grid-area: i;
+    place-self: center;}
 
-.i { grid-area: i; }
+.n { grid-area: n;
+    place-self: center;}
 
-.n { grid-area: n; }
-
-.g { grid-area: g; }
+.g { grid-area: g;
+    place-self: center;}
 
 .click { grid-area: click; }
 .anywhere { grid-area: anywhere; }
-.to { grid-area: to; }
-.enter { grid-area: enter; }
+.to { grid-area: to;}
+.enter { grid-area: enter;}
 
 .subtitle {
     display: block;
-    height: 3vh;
+    height: 4vh;
     padding-top: 8vh;
     margin-left: auto;
     margin-right: auto;
@@ -78,9 +85,61 @@ body, html {
 
 .img{
     display: block;
-    height: 8vh;
-    /*width: 90%;*/
-    margin-left: auto;
-    margin-right: auto;
+    height: 5vw;
+    margin: 0px;
+    max-height: 10em;
+    place-self: center;
+}
+
+/* Change to phone view */
+@media screen and (max-width: 750px) {
+
+    .emulating {
+        background-image: url("../images/backgrounds/graphpaper.jpg");
+        height: 100vh;
+        width: 100vw;
+    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        display: grid;
+        grid-template-columns: 1fr repeat(9, 1fr) 1fr;
+        grid-template-rows: 35% 10% 55%;
+        gap: 0 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . . . . . . . . . ."
+          "left-margin e m u l a t i n g right-margin"
+          ". click click anywhere anywhere anywhere anywhere to enter enter .";
+        margin: 0;
+        /* Unclear on what this is for
+        -ms-transform: translateY(30%);
+        transform: translateY(30%); */
+    }
+
+    .click { grid-area: click;}
+    .anywhere { grid-area: anywhere; }
+    .to { grid-area: to;}
+    .enter { grid-area: enter;}
+
+
+    .subtitle {
+        display: block;
+        height: 4vh;
+        padding-top: 8vh;
+        margin-left: auto;
+        margin-right: auto;
+        transform: rotate(0deg);
+    }
+
+    .img{
+        display: block;
+        height: 8vw;
+        margin: 0px;
+        max-height: 10em;
+        place-self: center;
+    }
+    
 }
 
