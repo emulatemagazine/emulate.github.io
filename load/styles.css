@@ -1,16 +1,22 @@
+/* Do not display the scroll bar  */
 html::-webkit-scrollbar {
     display: none;
 }
 
-.background{
+/* Set the body and the general document to take up the whole screen */
+body, html {
     height: 100vh;
-    width: 100%;
-    position: relative; 
+    margin: 0;
 }
 
-body {
-    overflow: hidden;
-    background-color: white;
+.background{
+    background-image: url("../images/backgrounds/graphpaper.jpg");
+    height: 100vh; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0vh;
 }
 
 .container {
