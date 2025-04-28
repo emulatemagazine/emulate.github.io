@@ -114,7 +114,7 @@ body, html {
         grid-template-areas:
           ". . . . . . . . . . ."
           "left-margin e m u l a t i n g right-margin"
-          ". click click anywhere anywhere anywhere anywhere to enter enter .";
+          ". . click click anywhere anywhere to enter enter . .";
         margin: 0;
         /* Unclear on what this is for
         -ms-transform: translateY(30%);
@@ -129,7 +129,7 @@ body, html {
     /* Expand image height */
     .img{
         display: block;
-        height: 8vw;
+        height: 7vw;
         margin: 0px;
         max-height: 10em;
         place-self: center;
