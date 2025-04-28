@@ -9,21 +9,14 @@ body, html {
     margin: 0;
 }
 
-/* Set the background image */
-.background{
-    background-image: url("../images/backgrounds/graphpaper.jpg");
-    height: 100vh; 
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Container */
+/* This div spans the entire body and has the graph paper pic as its background
+   It uses a Grid display to section the page into 11 columns and 3 rows 
+*/
 .emulating {
     background-image: url("../images/backgrounds/graphpaper.jpg");
     height: 100vh;
     width: 100vw;
+    margin: 0;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -43,6 +36,8 @@ body, html {
     -ms-transform: translateY(30%);
     transform: translateY(30%); */
 }
+
+/* Containers for the images of letters */
 .e { grid-area: e; 
     place-self: center;}
 
@@ -70,11 +65,25 @@ body, html {
 .g { grid-area: g;
     place-self: center;}
 
+/* Image class for the letters 
+   They are normally 5% of the viewport width 
+   but cannot exceed 10em 
+ */
+.img{
+    display: block;
+    height: 5vw;
+    max-height: 10em;
+    margin: 0px;
+    place-self: center;
+}
+
+/* Containers for the "Click Anywhere to Start" message */
 .click { grid-area: click; }
 .anywhere { grid-area: anywhere; }
 .to { grid-area: to;}
 .enter { grid-area: enter;}
 
+/* Image class for the "Click Aywhere to Start" message */
 .subtitle {
     display: block;
     height: 4vh;
@@ -83,17 +92,11 @@ body, html {
     margin-right: auto;
 }
 
-.img{
-    display: block;
-    height: 5vw;
-    margin: 0px;
-    max-height: 10em;
-    place-self: center;
-}
-
 /* Change to phone view */
 @media screen and (max-width: 750px) {
 
+    /* When you view on a phone, "emulating" expands to fit most of the screen, 
+    The "Click Anywhere to Start" also fits most of the screen  */
     .emulating {
         background-image: url("../images/backgrounds/graphpaper.jpg");
         height: 100vh;
@@ -123,16 +126,7 @@ body, html {
     .to { grid-area: to;}
     .enter { grid-area: enter;}
 
-
-    .subtitle {
-        display: block;
-        height: 4vh;
-        padding-top: 8vh;
-        margin-left: auto;
-        margin-right: auto;
-        transform: rotate(0deg);
-    }
-
+    /* Expand image height */
     .img{
         display: block;
         height: 8vw;
