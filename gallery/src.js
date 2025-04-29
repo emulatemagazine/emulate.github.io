@@ -31,33 +31,36 @@ function populate(id){
     // if we had node.js i think we would be able to read in the file 
     var folder_size; 
     if (id == "april-fools") {
-        folder_size = 51; 
+        folder_size = 50; 
     }
     if (id == "yule") {
         folder_size = 26;
     }
     if (id == "halloween") {
-        folder_size = 22;
+        folder_size = 20;
     }
 
     // establish the first side to be left
-    var left_column = true; 
+    // var left_column = true; 
     // loop through the folder 
     for (i =1; i < folder_size + 1; i++) {
         let img = document.createElement('img');
         // give the image a source 
         img.src = '../images/eventPhotos/' + id + '/' + i + '.jpg';
-        alert(img.src);
+        img.classList.add("event-img");
         // makes it so it only loads when the user scrolls down to it 
         img.loading = "lazy";
-        // place in appropriate column
-        if (left_column) {
-            document.getElementById("col1").appendChild(img);
-        } else {
-            document.getElementById("col2").appendChild(img);
-        }
-        // change the column side 
-        left_column = left_column ? false : true;
+        // // place in appropriate column
+        // if (left_column) {
+        //     // img.style.marginLeft = "25%";
+        //     document.getElementById("left").appendChild(img);
+        // } else {
+        //     // img.style.marginRight = "25%";
+        //     document.getElementById("right").appendChild(img);
+        // }
+        // // change the column side 
+        // left_column = left_column ? false : true;
+        document.getElementById("container").appendChild(img);
     }
 
     // then, set tab 
@@ -65,15 +68,19 @@ function populate(id){
 }
 
 function refresh(){
-    // remove images from column 1 and column 2 
-    let col1 = document.getElementById("col1");
-    let col2 = document.getElementById("col2");
-    while (col1.firstChild) {
-        col1.removeChild(col1.lastChild);
+    const container = document.getElementById("container");
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
     }
-    while (col2.firstChild) {
-        col2.removeChild(col2.lastChild);
-    }
+    // remove images from left and right column
+    // let col1 = document.getElementById("left");
+    // let col2 = document.getElementById("right");
+    // while (col1.firstChild) {
+    //     col1.removeChild(col1.lastChild);
+    // }
+    // while (col2.firstChild) {
+    //     col2.removeChild(col2.lastChild);
+    // }
 }
 
 function change_color(id) {
