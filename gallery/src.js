@@ -28,10 +28,10 @@ function populate(id){
     }
 
     // i am sure there is a smarter way to do this but i rly don't know how 
-    // if we had node.js (??) i think we would be able to read in the file 
+    // if we had node.js i think we would be able to read in the file 
     var folder_size; 
     if (id == "april-fools") {
-        folder_size = 55; 
+        folder_size = 51; 
     }
     if (id == "yule") {
         folder_size = 26;
@@ -46,7 +46,8 @@ function populate(id){
     for (i =1; i < folder_size + 1; i++) {
         let img = document.createElement('img');
         // give the image a source 
-        img.src = './../images/eventPhotos/' + id + '/' + i + '.jpg';
+        img.src = '../images/eventPhotos/' + id + '/' + i + '.jpg';
+        alert(img.src);
         // makes it so it only loads when the user scrolls down to it 
         img.loading = "lazy";
         // place in appropriate column
