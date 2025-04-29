@@ -126,14 +126,27 @@ body{
 
 .mission{
     width: 100%;
+    margin: 5vh auto;
+    max-width: 1200px;
     /*background: red;*/
-    margin-top: 5vh;
+    /*margin-top: 5vh;*/
     padding-top: 5vh;
     padding-bottom: 5vh;
 
     text-align: center;
+
+    font-family: "Spectral", serif;
+    font-size: 18px;
 }
 
+.core-caption{
+    padding-bottom: 2vh;
+
+    text-align: center;
+
+    font-family: "Spectral", serif;
+
+}
 
 
 .bios{
@@ -146,16 +159,19 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
 
+    font-family: "Spectral", serif;
+    font-size: 14px;
+
 }
 
+
 .bio{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     display: block;
 
     background-color: blue;
     /*text-align: center;*/
-
 
     margin-bottom: 50px;
 }
@@ -163,17 +179,18 @@ body{
 .bio img{
     position: relative;
     width: 70%;
-    height: 370px;
-    top: 20px;
+    height: 250px;
+    top: 25px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0 auto;
-    object-position: center 30%;
+    object-position: center 45%;
     object-fit: cover;
 }
 .text{
     margin: 0 auto;
     text-align: center;
+    padding-top: 30px;
 }
 
 #buddy{
@@ -203,22 +220,22 @@ body{
 
 
 #max{
-    background-image: url("../images/bio-pics/tiles/tile6.jpg");
-    background-size: cover;
-}
-
-#karen{
     background-image: url("../images/bio-pics/tiles/tile7.jpg");
     background-size: cover;
 }
 
+#karen{
+    background-image: url("../images/bio-pics/tiles/tile1.jpg");
+    background-size: cover;
+}
+
 #ac{
-    background-image: url("../images/bio-pics/tiles/tile3.jpg");
+    background-image: url("../images/bio-pics/tiles/tile2.jpg");
     background-size: cover;
 }
 
 #anneliese{
-    background-image: url("../images/bio-pics/tiles/tile4.jpg");
+    background-image: url("../images/bio-pics/tiles/tile3.jpg");
     background-size: cover;
 }
 
@@ -243,7 +260,7 @@ body{
 }
 
 #grace{
-    background-image: url("../images/bio-pics/tiles/tile1.jpg");
+    background-image: url("../images/bio-pics/tiles/tile6.jpg");
     background-size: cover;
 }
 
@@ -262,7 +279,7 @@ body{
 }
 
 #marlee{
-    background-image: url("../images/bio-pics/tiles/tile3.jpg");
+    background-image: url("../images/bio-pics/tiles/tile6.jpg");
     background-size: cover;
 }
 
