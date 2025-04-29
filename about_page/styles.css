@@ -117,7 +117,7 @@ body{
 .group-photo img{
     /*position: relative;*/
     margin: auto;
-    height: 90%;
+    height: 110%;
     width: auto;
     top: 200px;
 
@@ -127,6 +127,7 @@ body{
 .mission{
     width: 100%;
     /*background: red;*/
+    margin-top: 5vh;
     padding-top: 5vh;
     padding-bottom: 5vh;
 
@@ -162,10 +163,13 @@ body{
 .bio img{
     position: relative;
     width: 70%;
+    height: 370px;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0 auto;
+    object-position: center 30%;
+    object-fit: cover;
 }
 .text{
     margin: 0 auto;
