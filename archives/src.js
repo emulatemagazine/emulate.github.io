@@ -197,3 +197,17 @@ function previewOff(Spine, Cover){
 //     s.style.height = '${randomHeight}px';
 //     // s.style.top = `${800 - randomHeight}px`;
 // });
+
+function change_color(id) {
+    let elem  = document.getElementById(id);
+    if (id=="emulate"){
+        elem.src = "../images/emulate/emulate-logo-uppercase-pink.png";
+    }
+}
+
+function change_back(id) {
+    let elem  = document.getElementById(id);
+    if (id=="emulate"){
+        elem.src = "../images/emulate/emulate-logo-uppercase.png";
+    }
+}
