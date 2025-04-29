@@ -5,27 +5,29 @@ html::-webkit-scrollbar {
 
 /* Set up the background image */
 body {
+    position: absolute; 
+    width: 100%;
     background-image: url("../images/backgrounds/blueFabric.jpg");
     background-attachment: fixed;
-    /*background-size: cover;    */
     margin: 0;
     justify-content: center;
     overflow-x: hidden;
+    top: 20%;
 }
 
 /* Set the header  */
 header {
     position: fixed;
     z-index: 20;
+    top: 0%;
     text-align: center;
-
+    height: 20%;
     color: white;
     background-image: url("../images/backgrounds/blueFabric.jpg");
     font-family: "Spectral", serif;
     font-style: italic;
     width: 100%;
-
-    padding-bottom: .5em;
+    padding-bottom: 1em;
 }
 
 /* Set the size of the Emulate logo */
@@ -61,32 +63,20 @@ header {
 
 }
 
-.row{
-    position: absolute;
-    animation: scroll 500s linear infinite;
-    top: 20%;
-
-    z-index: 0;
-}
-
-.row:after {
-    padding: 20px;
-    content: "";
-    display: table;
-    clear: both;
-
-    z-index: 0;
-}
-
+/* Flexbox container for the images*/
 .container {
     display: flex;
     max-width: 100%;
     width: 100%;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    position: absolute; 
+    animation: scroll 400s linear infinite;
     justify-content: center;
     margin-bottom: 20px;
+    /* transform: translateY(5%); */
 }
 
+/* Images */
 .event-img {
     width: 500px;
     object-fit: cover;
@@ -96,6 +86,7 @@ header {
     filter: grayscale(100%);
 }
 
+/* Return to color on hover */
 .event-img:hover{
     -webkit-filter: grayscale(0%);
     filter: none;
