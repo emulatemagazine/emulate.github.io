@@ -104,6 +104,9 @@ function goPrevPage(){
     if(currentLocation > 0 && currentLocation <= maxLocation){
         if(currentLocation === 1){
             closeBook(true);
+            p1.classList.remove("flipped");
+            p1.style.zIndex = 999;
+
         }else if(currentLocation === maxLocation-1){
             openBook();
         }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Emulate Magazine</title>
     <link rel="stylesheet" type="text/css" href="./load/styles.css" />
@@ -8,10 +9,7 @@
 </head>
 
 <body>
-
-<div class="container">
-    <img src="./images/backgrounds/graphpaper.jpg" class = "background" alt="graphpaper"> </img>
-    <div class="emulating" onmouseover="call_random_rotate()">
+    <div class="emulating" onmouseover="call_random_rotate()" alt = "Graph Paper Background" id = "emulating">
         <div class="e">
             <img alt = "e" id= "e_image" class="img" src="./images/letters/E/1.png"></img>
         </div>
@@ -39,8 +37,7 @@
         <div class="g">
             <img alt = "g" class="img" id="g_image" src="./images/letters/G/1.png"></img>
         </div>
-        <div class="---">
-        </div>
+        <!-- <div class = "right-margin"> </div> -->
 
         <div class="click">
             <img alt = "click" id= "click_image" class="subtitle" src="./images/letters/subtitle/click.png"></img>
@@ -55,8 +52,6 @@
             <img alt = "enter" id= "enter_image" class="subtitle" src="./images/letters/subtitle/enter.png"></img>
         </div>
     </div>
-
-</div>
 
 </body>
 

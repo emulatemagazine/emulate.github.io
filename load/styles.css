@@ -1,82 +1,139 @@
+/* Do not display the scroll bar  */
 html::-webkit-scrollbar {
     display: none;
 }
 
-.background{
+/* Set the body and the general document to take up the whole screen */
+body, html {
     height: 100vh;
-    width: 100%;
-    position: relative; 
+    margin: 0;
 }
 
-body {
-    overflow: hidden;
-    background-color: white;
-}
-
-.container {
-    height: 100vh;
-    position: relative;
-}
-
+/* This div spans the entire body and has the graph paper pic as its background
+   It uses a Grid display to section the page into 11 columns and 3 rows 
+*/
 .emulating {
-    height: fit-content;
-    width: 100%;
-    display: grid;
-    position: absolute;
+    background-image: url("../images/backgrounds/graphpaper.jpg");
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0 50% 25%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 2fr repeat(9, 1fr) 2fr;
+    grid-template-rows: 35% 10% 55%;
     gap: 0 10px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". . . . . . . . . . . . . ."
-      ". . e m u l a t i n g --- . ."
-      ". . . . . click anywhere to enter . . . . .";
-
+      ". . . . . . . . . . ."
+      "left-margin e m u l a t i n g right-margin"
+      ". . . . . . click anywhere to enter .";
     margin: 0;
-    top: 30%;
+    /* Unclear on what this is for
     -ms-transform: translateY(30%);
-    transform: translateY(30%);
+    transform: translateY(30%); */
 }
 
-.e { grid-area: e;}
+/* Containers for the images of letters */
+.e { grid-area: e; 
+    place-self: center;}
 
-.m { grid-area: m;}
+.m { grid-area: m;
+    place-self: center;}
 
-.u { grid-area: u;}
+.u { grid-area: u;
+    place-self: center;}
 
-.l { grid-area: l; }
+.l { grid-area: l;
+    place-self: center;}
 
-.a { grid-area: a; }
+.a { grid-area: a; 
+    place-self: center;}
 
-.t { grid-area: t; }
+.t { grid-area: t;
+    place-self: center;}
 
-.i { grid-area: i; }
+.i { grid-area: i;
+    place-self: center;}
 
-.n { grid-area: n; }
+.n { grid-area: n;
+    place-self: center;}
 
-.g { grid-area: g; }
+.g { grid-area: g;
+    place-self: center;}
 
-.--- { grid-area: ---; }
+/* Image class for the letters 
+   They are normally 5% of the viewport width 
+   but cannot exceed 10em 
+ */
+.img{
+    display: block;
+    height: 5vw;
+    max-height: 10em;
+    margin: 0px;
+    place-self: center;
+}
 
+/* Containers for the "Click Anywhere to Start" message */
 .click { grid-area: click; }
 .anywhere { grid-area: anywhere; }
-.to { grid-area: to; }
-.enter { grid-area: enter; }
+.to { grid-area: to;}
+.enter { grid-area: enter;}
 
+/* Image class for the "Click Aywhere to Start" message */
 .subtitle {
     display: block;
-    height: 3vh;
+    height: 4vh;
     padding-top: 8vh;
     margin-left: auto;
     margin-right: auto;
 }
 
-.img{
-    display: block;
-    height: 8vh;
-    /*width: 90%;*/
-    margin-left: auto;
-    margin-right: auto;
+/* Change to phone view */
+@media screen and (max-width: 750px) {
+
+    /* When you view on a phone, "emulating" expands to fit most of the screen, 
+    The "Click Anywhere to Start" also fits most of the screen  */
+    .emulating {
+        background-image: url("../images/backgrounds/graphpaper.jpg");
+        height: 100vh;
+        width: 100vw;
+    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        display: grid;
+        grid-template-columns: 1fr repeat(9, 1fr) 1fr;
+        grid-template-rows: 35% 10% 55%;
+        gap: 0 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . . . . . . . . . ."
+          "left-margin e m u l a t i n g right-margin"
+          ". . click click anywhere anywhere to enter enter . .";
+        margin: 0;
+        /* Unclear on what this is for
+        -ms-transform: translateY(30%);
+        transform: translateY(30%); */
+    }
+
+    .click { grid-area: click;}
+    .anywhere { grid-area: anywhere; }
+    .to { grid-area: to;}
+    .enter { grid-area: enter;}
+
+    /* Expand image height */
+    .img{
+        display: block;
+        height: 7vw;
+        margin: 0px;
+        max-height: 10em;
+        place-self: center;
+    }
+    
 }
 
