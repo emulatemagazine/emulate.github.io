@@ -2,7 +2,8 @@
 // window.addEventListener("load", populate('april-fools'));
 
 // create a set of the folders/events (need to manually update when there is a new event)
-const events = new Set(["yule","april-fools","halloween"]);
+// const events = new Set(["yule","april-fools","halloween"]);
+const events = new Set(["april-fools","halloween"]);
 
 // sets to the most recent event (april fools open mic) when it loads
 window.addEventListener("load", populate("april-fools"));
