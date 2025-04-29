@@ -4,119 +4,23 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
-
     <title>Emulate Magazine</title>
 </head>
 <header>
     <h1 class="EMULATE"> <a href="../home%20page/home.html"> EMULATE </a></h1>
     <div class="navigation">
         <ul>
-            <li class="active"><a href="openMic_Halloween.html">halloween</a></li>
-            <li><a href="openMic_Yule.html">yule</a></li>
-            <li><a href="openMic_Yule.html">april fool's</a></li>
+            <li><button class="halloween" id="halloween" onclick="populate('halloween')" onmouseover = "change_color('halloween')" onmouseout = "change_back('halloween')">halloween</button></li>
+            <li><button class="yule" id="yule" onclick="populate('yule')" onmouseover = "change_color('yule')" onmouseout = "change_back('yule')">yule</button></li>
+            <li><button class="april-fools" id="april-fools" onclick="populate('april-fools')" onmouseover = "change_color('april-fools')" onmouseout = "change_back('april-fools')">april fool's</button></li>
         </ul>
     </div>
 </header>
 <body>
-<div class="parent">
-    <div class="a" id="-a">
+    <div class="row">
+        <div class="col" id="col1"></div>
+        <div class="col" id="col2"></div>
     </div>
-    <div class="b" id="-b">
-    </div>
-    <div class="c" id="-c">
-    </div>
-    <div class="d" id="-d">
-    </div>
-    <div class="e" id="-e">
-    </div>
-    <div class="f" id="-f">
-    </div>
-    <div class="g" id="-g">
-    </div>
-    <div class="h" id="-h">
-    </div>
-    <div class="i" id="-i">
-    </div>
-    <div class="j" id="-j">
-    </div>
-    <div class="k" id="-k">
-    </div>
-    <div class="l" id="-l">
-    </div>
-    <div class="m" id="-m">
-    </div>
-    <div class="n" id="-n">
-    </div>
-    <div class="o" id="-o">
-    </div>
-
-
-    <div class="Aa">
-    </div>
-    <div class="Bb">
-    </div>
-    <div class="Cc">
-    </div>
-    <div class="Dd">
-    </div>
-    <div class="Ee">
-    </div>
-    <div class="Ff">
-    </div>
-    <div class="Gg">
-    </div>
-    <div class="Hh">
-    </div>
-    <div class="Ii">
-    </div>
-    <div class="Jj">
-    </div>
-    <div class="Kk">
-    </div>
-    <div class="Ll">
-    </div>
-    <div class="Mm">
-    </div>
-    <div class="Nn">
-    </div>
-    <div class="Oo">
-    </div>
-
-    <div class="A" id="A-">
-    </div>
-    <div class="B" id="B-">
-    </div>
-    <div class="C" id="C-">
-    </div>
-    <div class="D" id="D-">
-    </div>
-    <div class="E" id="E-">
-    </div>
-    <div class="F" id="F-">
-    </div>
-    <div class="G" id="G-">
-    </div>
-    <div class="H" id="H-">
-    </div>
-    <div class="I" id="I-">
-    </div>
-    <div class="J" id="J-">
-    </div>
-    <div class="K" id="K-">
-    </div>
-    <div class="L" id="L-">
-    </div>
-    <div class="M" id="M-">
-    </div>
-    <div class="N" id="N-">
-    </div>
-    <div class="O" id="O-">
-    </div>
-</div>
-
 </body>
-
-
-<script src="src.js">
-</script>
+<script src="src.js"></script>
 </html>

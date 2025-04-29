@@ -1,3 +1,6 @@
+// when the gallery page is loaded, display the most recent event
+// window.addEventListener("load", populate('april-fools'));
+
 // create a set of the folders/events (need to manually update when there is a new event)
 const events = new Set(["yule","april-fools","halloween"]);
 
@@ -44,6 +47,8 @@ function populate(id){
         let img = document.createElement('img');
         // give the image a source 
         img.src = './../images/eventPhotos/' + id + '/' + i + '.jpg';
+        // makes it so it only loads when the user scrolls down to it 
+        img.loading = "lazy";
         // place in appropriate column
         if (left_column) {
             document.getElementById("col1").appendChild(img);
@@ -68,66 +73,6 @@ function refresh(){
     while (col2.firstChild) {
         col2.removeChild(col2.lastChild);
     }
-}
-
-
-// function zoom(){
-//     document.getElementById('zoomed').style.display = "block";
-// }
-//
-// let im = document.querySelector('.img');
-//
-// let zoom = () => {
-//     document.getElementById('zoomed').style.display = "block";
-// }
-// im.forEach((item) => {
-//     item.addEventListener('click', zoom)
-// });
-
-function random_rotate(id){
-    // chooses between -30 and 30 degrees
-    const min = -15;
-    const max = 15;
-    var degree = Math.floor(Math.random() * (max - min + 1)) + min;
-
-    document.getElementById(id).style.transform = "rotate("+ degree.toString() + "deg)";
-}
-
-const numMin = 1;
-const numMax = 3;
-let numElements = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
-
-for(let i = 0; i <= numElements; i++){
-    randomElement();
-}
-function randomElement(){
-    const eMin = 0;
-    const eMax = 39;
-    let currentImg = Math.floor(Math.random() * (eMax - eMin + 1)) + eMin;
-
-    let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
-    // let divs = ["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
-
-    const divMin = 0;
-    const divMax =6;
-    let curDiv = Math.floor(Math.random() * (divMax - divMin + 1)) + divMin;
-
-    const heads = 0;
-    const tails = 1;
-    let coin = Math.floor(Math.random() * (tails - heads + 1)) + heads;
-
-    let id = "";
-
-    if(coin === 1){
-        id = divs[curDiv].toUpperCase() + "-";
-    } else {
-        id = "-" + divs[curDiv];
-    }
-
-    let element = document.getElementById(id);
-    let image = '../images/collageElements/' + currentImg + '.png';
-    element.src = image;
-    random_rotate(id)
 }
 
 function change_color(id) {
