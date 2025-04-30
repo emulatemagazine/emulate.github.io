@@ -129,6 +129,10 @@ document.getElementById("outer3").addEventListener("mouseenter", function(  ) {o
 document.getElementById("outer3").addEventListener("mouseout", function(  ) {onGraphPaper=true;});
 document.getElementById("outer4").addEventListener("mouseenter", function(  ) {onGraphPaper=false;});
 document.getElementById("outer4").addEventListener("mouseout", function(  ) {onGraphPaper=true;});
+document.getElementById("recents").addEventListener("mouseenter", function(  ) {onGraphPaper=false;});
+document.getElementById("recents").addEventListener("mouseout", function(  ) {onGraphPaper=true;});
+document.getElementById("bg").addEventListener("mouseenter", function(  ) {onGraphPaper=false;});
+document.getElementById("bg").addEventListener("mouseout", function(  ) {onGraphPaper=true;});
 
 function turnpink(id) {
     var elem = document.getElementById(id);
