@@ -94,12 +94,6 @@ function activatePic(img, x, y){
     img.style.top = `${y}px`
     img.style.width = "2vh"
     img.style.zIndex = globalIndex // otherwise the last pic will always be at the top
-    // if the mouse is in the scissor/menu area, then turn visibility to hidden 
-    if (in_scissor_mouse_block) {
-        img.style.visibility = "hidden";
-    } else{
-        img.style.visibility = "visible";
-    }
     lastMousePosition = {x: x, y: y} // update the last mouse position
 }
 
@@ -115,8 +109,9 @@ window.onload = function() {
             if (mouseDistance(e.clientX, e.clientY) > displayDistance){
                 let activePic = images[globalIndex % images.length]
                 // let inactivePic = images[(globalIndex - nDisplay) % images.length]
-        
-                activatePic(activePic, e.clientX, e.clientY)
+                if (onGraphPaper) {
+                    activatePic(activePic, e.clientX, e.clientY)
+                }
                 // if (inactivePic){inactivePic.dataset.status = "inactive"}
         
                 globalIndex++
@@ -124,6 +119,16 @@ window.onload = function() {
         }
     }, 250)
 }
+
+var onGraphPaper = true;
+document.getElementById("outer1").addEventListener("mouseenter", function(  ) {onGraphPaper=false;});
+document.getElementById("outer1").addEventListener("mouseout", function(  ) {onGraphPaper=true;});
+document.getElementById("outer2").addEventListener("mouseenter", function(  ) {onGraphPaper=false;});
+document.getElementById("outer2").addEventListener("mouseout", function(  ) {onGraphPaper=true;});
+document.getElementById("outer3").addEventListener("mouseenter", function(  ) {onGraphPaper=false;});
+document.getElementById("outer3").addEventListener("mouseout", function(  ) {onGraphPaper=true;});
+document.getElementById("outer4").addEventListener("mouseenter", function(  ) {onGraphPaper=false;});
+document.getElementById("outer4").addEventListener("mouseout", function(  ) {onGraphPaper=true;});
 
 function turnpink(id) {
     var elem = document.getElementById(id);

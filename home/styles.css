@@ -158,7 +158,10 @@ body{
     grid-template-rows: .15fr repeat(3, 1fr) .15fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+}
 
+.graphpaper{
+    grid-area: 2 / 2 / 5 / 5; 
 }
 
 .outer1 { grid-area: 1 / 1 / 2 / 6;
