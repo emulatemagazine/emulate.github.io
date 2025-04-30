@@ -92,6 +92,13 @@ body, html {
     margin-right: auto;
 }
 
+.best-viewed{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    visibility: hidden;
+}
+
 /* Change to phone view */
 @media screen and (max-width: 750px) {
 
@@ -143,6 +150,18 @@ body, html {
         max-height: 10em;
         place-self: center;
     }
+
+    .best-viewed{
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        width: 100%;
+        visibility: visible;
+    }
+    .best-viewed img {
+        width: 90vw;
+    }
+    
     
 }
 
