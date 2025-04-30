@@ -128,10 +128,10 @@ body, html {
         transform: translateY(30%); */
     }
 
-    .click { position: absolute; top: 37%; left: 10%;}
-    .anywhere { position: absolute; top: 37%; left: 30%;}
-    .to { position: absolute; top: 37%; left: 60%;}
-    .enter { position: absolute; top: 37%; left: 70%;}
+    .click { position: absolute; top: 42%; left: 10%;}
+    .anywhere { position: absolute; top: 42%; left: 30%;}
+    .to { position: absolute; top: 42%; left: 60%;}
+    .enter { position: absolute; top: 42%; left: 70%;}
 
     /* Image class for the "Click Aywhere to Start" message */
     .subtitle {
