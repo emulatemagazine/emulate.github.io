@@ -3,7 +3,7 @@ function change_color(id) {
     let elem  = document.getElementById(id);
     // need to change the photo for this one 
     if (id=="emulate"){
-        elem.src = "../images/emulate/emulate-logo-uppercase-pink.png";
+        elem.src = "../../images/emulate/emulate-logo-uppercase-pink.png";
     } else {
         elem.style.color = "HotPink";
     }
@@ -13,7 +13,7 @@ function change_back(id) {
     let elem  = document.getElementById(id);
     // need to change the photo for this one 
     if (id=="emulate"){
-        elem.src = "../images/emulate/emulate-logo-uppercase.png";
+        elem.src = "../../images/emulate/emulate-logo-uppercase.png";
     } else {
         elem.style.color = "white";
     }
@@ -31,7 +31,7 @@ function prev() {
     var newNum = ( num - 1 == 0 ) ? pages : (num - 1); 
 
     // replace the src of the image 
-    img.src = "../images/featured/liminal-smith/" + newNum + ".jpg";
+    img.src = "../../images/featured/liminal-smith/" + newNum + ".jpg";
 
     changeCaption(newNum);
 }
@@ -44,7 +44,7 @@ function next() {
     var newNum = ( num + 1 == pages + 1 ) ? 1 : (num + 1); 
 
     // replace the src of the image 
-    img.src = "../images/featured/liminal-smith/" + newNum + ".jpg";
+    img.src = "../../images/featured/liminal-smith/" + newNum + ".jpg";
 
     changeCaption(newNum);
 }
