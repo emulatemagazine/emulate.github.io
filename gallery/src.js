@@ -91,7 +91,7 @@ function change_color(id) {
     }
     let elem  = document.getElementById(id);
     if (id=="emulate"){
-        elem.src = "../images/emulate/emulate-logo-uppercase-pink.png";
+        elem.src = "../images/emulate/emulate-logo-uppercase.png";
     } else {
         elem.style.color = "HotPink";
     }
@@ -100,7 +100,7 @@ function change_color(id) {
 function change_back(id) {
     let elem  = document.getElementById(id);
     if (id=="emulate"){
-        elem.src = "../images/emulate/emulate-logo-uppercase.png";
+        elem.src = "../images/emulate/emulate-logo-white-uppercase.png";
     } else {
         elem.style.color = "white";
     }
