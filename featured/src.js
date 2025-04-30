@@ -3,9 +3,7 @@ function change_color(id) {
     let elem  = document.getElementById(id);
     // need to change the photo for this one 
     if (id=="emulate"){
-        elem.src = "../../images/emulate/emulate-logo-uppercase-pink.png";
-    } else {
-        elem.style.color = "HotPink";
+        elem.src = "../../images/emulate/emulate-logo-uppercase.png";
     }
 }
 
@@ -13,9 +11,7 @@ function change_back(id) {
     let elem  = document.getElementById(id);
     // need to change the photo for this one 
     if (id=="emulate"){
-        elem.src = "../../images/emulate/emulate-logo-uppercase.png";
-    } else {
-        elem.style.color = "white";
+        elem.src = "../../images/emulate/Untitled_Artwork 13.png";
     }
 }
 

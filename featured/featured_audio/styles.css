@@ -1,0 +1,93 @@
+header{
+    position: fixed; 
+    height: 18%;
+    background-repeat: repeat;
+    background-size: cover;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    background-image: url("../../images/backgrounds/blueFabric.jpg");
+}
+.emulate {
+    position: sticky;
+    width: 15%;
+}
+
+body{
+    height: 100%;
+    background-image: url("../../images/backgrounds/blueFabric.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 15vh 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.break { grid-area: 1 / 1 / 2 / 4; }
+.text{
+    font-family: 'Spectral', 'Courier New', monospace;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+
+    height: fit-content;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 2em;
+    padding-bottom: 5em;
+
+    background-color: #27293D;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.title{
+    font-style: italic;
+    font-size: 20px;
+    color:cornsilk;
+}
+.author{
+    font-style: italic;
+}
+
+
+/* Change to phone view */
+@media screen and (max-width: 800px) {
+    body{
+        height: 100%;
+        background-image: url("../../images/backgrounds/blueFabric.jpg");
+        background-repeat: repeat;
+        background-size: cover;
+        margin: 0;
+    
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 15vh 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .text{
+        font-family: 'Spectral', 'Courier New', monospace;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+
+        height: fit-content;
+        padding-top: 2em;
+        padding-bottom: 5em;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    
+        background-color: #27293D;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .emulate {
+        position: sticky;
+        width: 30%;
+    }
+
+}
