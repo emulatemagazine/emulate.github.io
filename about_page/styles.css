@@ -10,9 +10,11 @@ header {
     font-family: "Spectral", serif;
     font-style: italic;
     width: 100%;
+    height: 10vh;
 
     /*padding-bottom: .5em;*/
     padding: 1em;
+    background-image: url("../images/backgrounds/greenGrid.jpg");
 }
 /*.EMULATE {*/
 /*    left: 50%;*/
@@ -20,6 +22,10 @@ header {
 
 /*    background-color: red;*/
 /*}*/
+
+.emulate{
+    width: 15%;
+}
 
 .scissors{
     position: absolute;
@@ -113,6 +119,7 @@ body{
     margin: auto;
 
     /*background-color: darkred;*/
+
 }
 .group-photo img{
     /*position: relative;*/
@@ -120,13 +127,14 @@ body{
     height: 110%;
     width: auto;
     top: 200px;
+    border: 10px solid hotpink;
 
 }
 
 
 .mission{
-    width: 100%;
-    margin: 5vh auto;
+    width: 95%;
+    margin: 5% auto;
     max-width: 1200px;
     /*background: red;*/
     /*margin-top: 5vh;*/
@@ -137,6 +145,7 @@ body{
 
     font-family: "Spectral", serif;
     font-size: 18px;
+    background-color: white;
 }
 
 .core-caption{
@@ -170,7 +179,7 @@ body{
     height: 300px;
     display: block;
 
-    background-color: blue;
+    /* background-color: blue; */
     /*text-align: center;*/
 
     margin-bottom: 50px;
@@ -186,6 +195,7 @@ body{
     margin: 0 auto;
     object-position: center 45%;
     object-fit: cover;
+    loading: lazy;
 }
 .text{
     margin: 0 auto;
@@ -194,127 +204,103 @@ body{
 }
 
 #buddy{
-    background-image: url("../images/bio-pics/tiles/tile6.jpg");
     background-size: cover;
 }
 
 #ruthie{
-    background-image: url("../images/bio-pics/tiles/tile2.jpg");
+    background-color: white;
     background-size: cover;
 }
 
 #isabelle{
-    background-image: url("../images/bio-pics/tiles/tile5.jpg");
     background-size: cover;
 }
 
 #maggie {
-    background-image: url("../images/bio-pics/tiles/tile4.jpg");
     background-size: cover;
 }
 
 #ruby{
-    background-image: url("../images/bio-pics/tiles/tile1.jpg");
     background-size: cover;
 }
 
 
 #max{
-    background-image: url("../images/bio-pics/tiles/tile7.jpg");
     background-size: cover;
 }
 
 #karen{
-    background-image: url("../images/bio-pics/tiles/tile1.jpg");
     background-size: cover;
 }
 
 #ac{
-    background-image: url("../images/bio-pics/tiles/tile2.jpg");
     background-size: cover;
 }
 
 #anneliese{
-    background-image: url("../images/bio-pics/tiles/tile3.jpg");
     background-size: cover;
 }
 
 #apple{
-    background-image: url("../images/bio-pics/tiles/tile1.jpg");
     background-size: cover;
 }
 
 #beatrix{
-    background-image: url("../images/bio-pics/tiles/tile7.jpg");
     background-size: cover;
 }
 
 #dina{
-    background-image: url("../images/bio-pics/tiles/tile3.jpg");
     background-size: cover;
 }
 
 #elie{
-    background-image: url("../images/bio-pics/tiles/tile4.jpg");
     background-size: cover;
 }
 
 #grace{
-    background-image: url("../images/bio-pics/tiles/tile6.jpg");
     background-size: cover;
 }
 
 #isabel{
-    background-image: url("../images/bio-pics/tiles/tile5.jpg");
     background-size: cover;
 }
 
 #jocelyn{
-    background-image: url("../images/bio-pics/tiles/tile3.jpg");
     background-size: cover;
 }
 #lily{
-    background-image: url("../images/bio-pics/tiles/tile2.jpg");
     background-size: cover;
 }
 
 #marlee{
-    background-image: url("../images/bio-pics/tiles/tile6.jpg");
     background-size: cover;
 }
 
 #maya{
-    background-image: url("../images/bio-pics/tiles/tile4.jpg");
     background-size: cover;
 }
 
 #ramona{
-    background-image: url("../images/bio-pics/tiles/tile1.jpg");
     background-size: cover;
 }
 
 #sophia{
-    background-image: url("../images/bio-pics/tiles/tile7.jpg");
     background-size: cover;
 }
 
 
 #maia{
-    background-image: url("../images/bio-pics/tiles/tile3.jpg");
     background-size: cover;
 }
 
 #smilla{
-    background-image: url("../images/bio-pics/tiles/tile4.jpg");
     background-size: cover;
 }
 
 #onamika{
-    background-image: url("../images/bio-pics/tiles/tile1.jpg");
     background-size: cover;
 }
 
 #akshita{
-    background-image: url("../images/bio-pics/tiles/tile7.jpg");
     background-size: cover;
 }
