@@ -3,8 +3,7 @@ html::-webkit-scrollbar {
 }
 
 body{
-    width: 100vh;
-    height: 100vh;
+    width: 100vw;
 
     /*background-image: url(../images/buddys-stuff/coreTeamPixel.png);*/
     background-image: url(../images/backgrounds/graphpaper.jpg);
@@ -292,7 +291,7 @@ padding-right: 40px}
 .genre {
     font-family: 'Spectral', 'Courier New', monospace;
     font-size: 13px;
-    color: cornsilk;
+    color: #FFF8DC;
     font-style: italic;
 }
 

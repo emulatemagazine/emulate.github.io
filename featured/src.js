@@ -11,7 +11,7 @@ function change_back(id) {
     let elem  = document.getElementById(id);
     // need to change the photo for this one 
     if (id=="emulate"){
-        elem.src = "../../images/emulate/Untitled_Artwork 13.png";
+        elem.src = "../../images/emulate/emulate-logo-white-uppercase.png";
     }
 }
 
