@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+
+    <script src="../src.js" defer></script>
+
+    <title>Featured</title>
+</head>
+<header>
+    <h1> <a href="../../home/main.html">
+        <img src = "../../images/emulate/emulate-logo-uppercase.png" onmouseover = "change_color('emulate')" onmouseout = "change_back('emulate')" class="emulate" id = "emulate"></img> </a></h1>
+</header>
+<body>
+    <div class = "break"></div>
+    <div class = "text">
+        <div class = "img-display"> 
+            <div class = "left-column">
+                <img  id = "arrow-prev" class="arrow-prev" src="../../images/library/arrow.png" alt="<<" onclick = "prev()"></img>
+            </div>
+            <img class = "img" src = "../../images/featured/liminal-smith/1.jpg" id = "img">
+            </img>
+            <div class = "right-column">
+                <img id = "arrow-next" class="arrow-next" src="../../images/library/arrow.png" alt="<<"  onclick = "next()"></img>
+            </div>
+        </div>
+        <div class = "caption">
+            <p id = "caption" >1 / 3</p>
+            <span class = "title">liminal smith</span><br>
+            <span class = "author">mazzy smallwood</span>
+        </div>
+    </div>
+</body>

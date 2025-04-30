@@ -3,8 +3,7 @@ html::-webkit-scrollbar {
 }
 
 body{
-    width: 100vh;
-    height: 100vh;
+    width: 100vw;
 
     /*background-image: url(../images/buddys-stuff/coreTeamPixel.png);*/
     background-image: url(../images/backgrounds/graphpaper.jpg);
@@ -245,7 +244,7 @@ body{
 
 .bg {
     width: 100%;
-    height: 200vh;
+    height: 275%;
 
     position: absolute;
     top: 95%;
@@ -284,7 +283,40 @@ padding-right: 40px}
 }
 .caption {
     font-family: 'Spectral', 'Courier New', monospace;
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     font-style: italic;
+}
+
+.genre {
+    font-family: 'Spectral', 'Courier New', monospace;
+    font-size: 13px;
+    color: #FFF8DC;
+    font-style: italic;
+}
+
+/* Change to phone view */
+@media screen and (max-width: 750px) {
+    .scissors{
+        width: 10vh;
+        /* This height causes the two scissor images to overlap */
+        height: 0vh;
+    
+        position: relative;
+        top: -4vh;
+        left: 10vh;
+        z-index: 999;
+    }
+    
+    .scissor_img_top{
+        height: 20vh;
+        width: auto;
+        rotate: -90deg;
+    }
+    
+    .scissor_img_bottom{
+        height: 20vh;
+        width: auto;
+        rotate: -90deg;
+    }
 }
