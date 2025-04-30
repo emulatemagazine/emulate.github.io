@@ -1,6 +1,7 @@
 /* Set the size of the Emulate logo */
 .emulate{
     width: 15%;
+    color: black;
 } 
 
 * {
@@ -36,6 +37,27 @@ a:link, a:visited{
 
 a:hover{
     color: hotpink;
+}
+a{
+    color: black;
+}
+
+.update{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 30vh;
+    width: 20%;
+    background-color: hotpink;
+
+    padding: 2em;
+}
+.update h3{
+    position: absolute;
+    font-family: "Monospac821 BT", monospace;
+    color: white;
+
 }
 
 header {
