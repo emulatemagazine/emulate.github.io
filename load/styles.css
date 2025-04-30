@@ -121,10 +121,19 @@ body, html {
         transform: translateY(30%); */
     }
 
-    .click { grid-area: click;}
-    .anywhere { grid-area: anywhere; }
-    .to { grid-area: to;}
-    .enter { grid-area: enter;}
+    .click { position: absolute; top: 37%; left: 10%;}
+    .anywhere { position: absolute; top: 37%; left: 30%;}
+    .to { position: absolute; top: 37%; left: 60%;}
+    .enter { position: absolute; top: 37%; left: 70%;}
+
+    /* Image class for the "Click Aywhere to Start" message */
+    .subtitle {
+        display: block;
+        height: 3vh;
+        padding-top: 8vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     /* Expand image height */
     .img{
