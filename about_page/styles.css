@@ -195,7 +195,6 @@ body{
     margin: 0 auto;
     object-position: center 45%;
     object-fit: cover;
-    loading: lazy;
 }
 .text{
     margin: 0 auto;
@@ -204,11 +203,6 @@ body{
 }
 
 #buddy{
-    background-size: cover;
-}
-
-#ruthie{
-    background-color: white;
     background-size: cover;
 }
 
@@ -288,6 +282,9 @@ body{
     background-size: cover;
 }
 
+#ruthie{
+    background-size: cover;
+}
 
 #maia{
     background-size: cover;

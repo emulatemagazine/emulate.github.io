@@ -32,7 +32,7 @@ function populate(id){
     // if we had node.js i think we would be able to read in the file 
     var folder_size; 
     if (id == "april-fools") {
-        folder_size = 50; 
+        folder_size = 49; 
     }
     if (id == "yule") {
         folder_size = 26;
